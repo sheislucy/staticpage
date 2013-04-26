@@ -1,0 +1,173 @@
+input[type="text"],input[type="password"],textarea {
+	outline-style: none;
+	-webkit-appearance: none;
+}
+
+#headerNav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	-webkit-box-shadow: #666 0px 0px 10px;
+	-moz-box-shadow: #666 0px 0px 10px;
+	box-shadow: #666 0px 0px 10px;
+	background: #EEFF99;
+	behavior: url(/PIE.htc);
+	margin: 0px auto;
+}
+
+#headerNav div.weather {
+	width: 200px;
+	margin-top: 8px;
+	margin-left: 200px;
+	font-size: 13px;
+	color: #006400;
+	position: relative;
+	float: left;
+}
+
+#headerNav div.loginWrapper {
+	width: 300px;
+	right: 200px;
+	font-size: 13px;
+	position: absolute;
+	float: left;
+	margin-top: 4px;
+}
+
+#headerNav div.loginWrapper input {
+	margin-top: 2px;
+	margin-left: 2px;
+	border: 0px;
+	height: 15px;
+}
+
+#headerNav div.loginWrapper div.loginAcct {
+	width: 120px;
+	float: left;
+	border: 1px solid #75a960;
+	background: #fff;
+	height: 20px;
+}
+
+#headerNav div.loginWrapper div.loginAcct input {
+	width: 116px;
+}
+
+#headerNav div.loginWrapper div.loginAcct input:active {
+	width: 116px;
+}
+
+#headerNav div.loginWrapper div.loginPassword {
+	margin-left: 2px;
+	width: 100px;
+	float: left;
+	border: 1px solid #75a960;
+	background: #fff;
+	height: 20px;
+}
+
+#headerNav div.loginWrapper div.loginPassword input {
+	width: 96px;
+}
+
+#headerNav div.loginWrapper div.loginBtn {
+	width: 50px;
+	float: left;
+	margin-left: 4px;
+	margin-top: -1px;
+}
+
+#headerNav div.loginWrapper div.loginBtn input {
+	width: 50px;
+	border: 1px solid #75a960;
+	background: #cef791;
+	height: 20px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	color: #555555;
+}
+
+#headerNav div.loginWrapper div.loginBtn input:hover {
+	cursor: pointer;
+	background: #eaf7b1;
+	color: #000;
+}
+
+#headerNav div.loginWrapper div.loginBtn input:active {
+	cursor: pointer;
+	background: #f8fcf3;
+	color: #000;
+}
+
+#mainNav {
+	height: 100px;
+	width: 100%;
+	padding-top: 30px;
+	min-width: 1000px;
+}
+
+#mainNav div.navWrapper {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#mainNav div.navWrapper a.logo {
+	width: 300px;
+	height: 100px;
+	background-image: url(../images/logo.png);
+	float: left;
+	display: inline;
+}
+
+#mainNav div.navWrapper div.searchInput {
+	border: 1px solid #75a960;
+	background: #fff;
+	margin-left: 20px;
+	margin-top: 35px;
+	width: 300px;
+	height: 30px;
+	float: left;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+#mainNav div.navWrapper div.searchInput input {
+	width: 280px;
+	height: 20px;
+	margin-top: 5px;
+	margin-left: 5px;
+	font-size: 15px;
+	border: 0px;
+}
+
+#mainNav div.navWrapper div.searchBtn {
+	margin-left: -1px;
+	margin-top: 35px;
+	float: left;
+}
+
+#mainNav div.navWrapper div.searchBtn input {
+	width: 60px;
+	height: 32px;
+	border: 1px solid #75a960;
+	background: #cef791;
+	color: #555555;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+#mainNav div.navWrapper div.searchBtn input:hover {
+	cursor: pointer;
+	background: #eaf7b1;
+	color: #000;
+}
+
+#mainNav div.navWrapper div.searchBtn input:active {
+	cursor: pointer;
+	background: #f8fcf3;
+	color: #000;
+}
