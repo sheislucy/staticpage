@@ -3,6 +3,13 @@ input[type="text"],input[type="password"],textarea {
 	-webkit-appearance: none;
 }
 
+ul,ol {
+	list-style: none;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-padding-start: 0em;
+}
+
 #headerNav {
 	position: fixed;
 	top: 0;
@@ -12,9 +19,19 @@ input[type="text"],input[type="password"],textarea {
 	-webkit-box-shadow: #666 0px 0px 10px;
 	-moz-box-shadow: #666 0px 0px 10px;
 	box-shadow: #666 0px 0px 10px;
-	background: #EEFF99;
+	background: #fff;
 	behavior: url(/PIE.htc);
 	margin: 0px auto;
+	z-index: 9999;
+}
+
+#headerNav div.line {
+	width: 100%;
+	height: 1px;
+	margin: 0px auto;
+	padding: 0px;
+	background-color: #75a960;
+	overflow: hidden;
 }
 
 #headerNav div.weather {
@@ -113,6 +130,8 @@ input[type="text"],input[type="password"],textarea {
 #mainNav div.navWrapper {
 	width: 1000px;
 	margin: 0 auto;
+	display: block;
+	float: right;
 }
 
 #mainNav div.navWrapper a.logo {
@@ -126,7 +145,6 @@ input[type="text"],input[type="password"],textarea {
 #mainNav div.navWrapper div.searchInput {
 	border: 1px solid #75a960;
 	background: #fff;
-	margin-left: 20px;
 	margin-top: 35px;
 	width: 300px;
 	height: 30px;
@@ -170,4 +188,98 @@ input[type="text"],input[type="password"],textarea {
 	cursor: pointer;
 	background: #f8fcf3;
 	color: #000;
+}
+
+#menuNav {
+	width: 1000px;
+	margin: 0 auto;
+	display: block;
+	height: 150px;
+}
+
+#menuNav div.line {
+	width: 100%;
+	height: 2px;
+	margin: 0px auto;
+	padding: 0px;
+	background-color: #75a960;
+	overflow: hidden;
+}
+
+#menuNav div.menu-block {
+	float: left;
+	height: 140px;
+	width: 199px;
+}
+
+#menuNav div.menu-block div.primary {
+	font-size: 16px;
+	display: inline;
+	float: left;
+	margin-left: 0;
+	margin-top: 18px;
+}
+
+#menuNav div.menu-block div.primary li {
+	padding-right: 10px;
+	width: 100px;
+	text-align: right;
+}
+
+#menuNav div.menu-block a {
+	color: #006400;
+	cursor: pointer;
+}
+
+#menuNav div.menu-block a:hover {
+	color: #ec6801;
+	text-decoration: underline;
+}
+
+#menuNav div.menu-block div.secondary {
+	font-size: 14px;
+	display: block;
+	margin-left: 110px;
+	margin-top: 10px;
+}
+
+#menuNav div.menu-block div.secondary li {
+	width: 90px;
+	padding-top: 8px;
+}
+
+.divide {
+	border-right: 1px dashed #dcdddd;
+}
+
+/*******************footer********************/
+#footerNav {
+	width: 1000px;
+	overflow: hidden;
+	text-align: center;
+	color: #939393;
+	font-size: 12px;
+	margin: 0 auto;
+}
+
+#footerNav #footerMenu {
+	height: 30px;
+	margin-top: 15px;
+	border-top: 1px solid #75a960;
+}
+
+#footerNav ul {
+	margin-top: 10px;
+}
+
+#footerNav ul li {
+	display: inline;
+}
+
+#footerNav ul li a {
+	cursor: pointer;
+}
+
+#footerNav p {
+	margin: 0;
 }

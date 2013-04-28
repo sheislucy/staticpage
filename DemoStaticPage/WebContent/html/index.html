@@ -2,13 +2,114 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="龙园村CMS演示" />
+<meta name="keywords" content="龙园村CMS演示" />
 <link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript"
+	src="../js/jquery-1.9.1.js"></script>
 <title>首页 - Prototype</title>
+
+<script language="javascript" type="text/javascript">
+	$(function() {
+		$(".commonTab > span").each(function() {
+			$(this).hover(function() {
+				$(this).addClass("select");
+				$(this).siblings().removeClass("select");
+				var name = "div#" + $(this).attr("id") + "-div";
+				$(name).removeClass("hide");
+				$(name).siblings(".commonList").addClass("hide");
+			});
+		});
+
+		//-----------scroll pictures
+		var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+		var len = $("#focus ul li").length; //获取焦点图个数
+		var index = 0;
+		var picTimer;
+
+		//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+		var btn = "<div class='btnBg'></div><div class='btn'>";
+		for ( var i = 0; i < len; i++) {
+			btn += "<span></span>";
+		}
+		btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+		$("#focus").append(btn);
+		$("#focus .btnBg").css("opacity", 0.5);
+
+		//为小按钮添加鼠标滑入事件，以显示相应的内容
+		$("#focus .btn span").css("opacity", 0.4).mouseover(function() {
+			index = $("#focus .btn span").index(this);
+			showPics(index);
+		}).eq(0).trigger("mouseover");
+
+		//上一页、下一页按钮透明度处理
+		$("#focus .preNext").css("opacity", 0.2).hover(function() {
+			$(this).stop(true, false).animate({
+				"opacity" : "0.5"
+			}, 300);
+		}, function() {
+			$(this).stop(true, false).animate({
+				"opacity" : "0.2"
+			}, 300);
+		});
+
+		//上一页按钮
+		$("#focus .pre").click(function() {
+			index -= 1;
+			if (index == -1) {
+				index = len - 1;
+			}
+			showPics(index);
+		});
+
+		//下一页按钮
+		$("#focus .next").click(function() {
+			index += 1;
+			if (index == len) {
+				index = 0;
+			}
+			showPics(index);
+		});
+
+		//本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+		$("#focus ul").css("width", sWidth * (len));
+
+		//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+		$("#focus").hover(function() {
+			clearInterval(picTimer);
+		}, function() {
+			picTimer = setInterval(function() {
+				showPics(index);
+				index++;
+				if (index == len) {
+					index = 0;
+				}
+			}, 4000); //此4000代表自动播放的间隔，单位：毫秒
+		}).trigger("mouseleave");
+
+		//显示图片函数，根据接收的index值显示相应的内容
+		function showPics(index) { //普通切换
+			var nowLeft = -index * sWidth; //根据index值计算ul元素的left值
+			$("#focus ul").stop(true, false).animate({
+				"left" : nowLeft
+			}, 300); //通过animate()调整ul元素滚动到计算出的position
+			//$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+			$("#focus .btn span").stop(true, false).animate({
+				"opacity" : "0.4"
+			}, 300).eq(index).stop(true, false).animate({
+				"opacity" : "1"
+			}, 300); //为当前的按钮切换到选中的效果
+		}
+
+	});
+</script>
 </head>
 <body>
 
 	<!-- START inc_header.html -->
 	<div id="headerNav">
+		<div class="line"></div>
 		<div class="weather">衢州市 多云 25～9℃</div>
 		<div class="loginWrapper">
 			<form>
@@ -41,7 +142,386 @@
 		</div>
 	</div>
 
+	<div id="menuNav">
+		<div class="line"></div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<ul>
+					<li><a><b>美丽龙园</b></a></li>
+				</ul>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a>走近龙园</a></li>
+					<li><a>新村新貌</a></li>
+					<li><a>全景农村</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<ul>
+					<li><a><b>文化龙园</b></a></li>
+				</ul>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a>节事活动</a></li>
+					<li><a>光荣榜</a></li>
+					<li><a>文化遗产</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<ul>
+					<li class="primary"><a><b>龙园大市场</b></a></li>
+				</ul>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li class="secondary"><a>赶集</a></li>
+					<li class="secondary"><a>农村旅游</a></li>
+					<li class="secondary"><a>农家乐</a></li>
+					<li class="secondary"><a>我要求职</a></li>
+					<li class="secondary"><a>企业招聘</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<ul>
+					<li class="primary"><a><b>龙园大学堂</b></a></li>
+				</ul>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li class="secondary"><a>兴农科普</a></li>
+					<li class="secondary"><a>政策法规</a></li>
+					<li class="secondary"><a>办事指南</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block">
+			<div class="primary">
+				<ul>
+					<li class="primary"><a><b>情系龙园</b></a></li>
+				</ul>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li class="secondary"><a>游子情</a></li>
+					<li class="secondary"><a>我要帮扶</a></li>
+					<li class="secondary"><a>慈善易物</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
 	<!-- END inc_header.html -->
 
+
+	<!-- START inc_index_body.html -->
+	<div id="index-part-a">
+		<div class="news">
+			<div class="commonTab background">
+				<span class="select" id="latestNews"><a>最新资讯</a></span> <span
+					id="findJob"><a>求职</a></span><span id="findEmployee"><a>招聘</a></span>
+			</div>
+			<div class="commonList shadow" id="latestNews-div">
+				<ul>
+					<li><a title="复旦投毒案细节全回顾">复旦投毒案细节全回顾</a><span>2013-4-27</span></li>
+					<li><a title="韩发重大举措">韩发重大举措</a><span>2013-4-27</span></li>
+					<li><a title="普京被问幸福">普京被问幸福</a><span>2013-4-27</span></li>
+					<li><a title="英逃犯在京被拘">英逃犯在京被拘</a><span>2013-4-27</span></li>
+					<li><a title="杀妻男曾家暴">杀妻男曾家暴</a><span>2013-4-27</span></li>
+					<li><a title="女子猛抽交警">女子猛抽交警</a><span>2013-4-27</span></li>
+					<li><a title="红会遭讽刺">红会遭讽刺</a><span>2013-4-27</span></li>
+					<li><a title="朝战争可能小">朝战争可能小</a><span>2013-4-27</span></li>
+					<li><a title="中国形成完善核武政策">中国形成完善核武政策</a><span>2013-4-27</span></li>
+					<li><a title="外媒称运20像愤怒的小鸟">外媒称运20像愤怒的小鸟</a><span>2013-4-27</span></li>
+				</ul>
+			</div>
+			<div class="commonList shadow hide" id="findJob-div">
+				<ul>
+					<li><a title="日媒称中国40多架军机曾在钓鱼岛周边护驾执法船">日媒称中国40多架军机曾在钓鱼岛周边护驾执法船</a><span>2013-4-27</span></li>
+					<li><a title="外交部要求菲方从8个中国岛礁撤走一切人员">外交部要求菲方从8个中国岛礁撤走一切人员</a><span>2013-4-27</span></li>
+					<li><a title="浙江增1例H7N9病例">浙江增1例H7N9病例</a><span>2013-4-27</span></li>
+					<li><a title="温州市财政局副局长因醉驾被刑拘">温州市财政局副局长因醉驾被刑拘</a><span>2013-4-27</span></li>
+					<li><a title="温州市长暗访电镀厂">温州市长暗访电镀厂</a><span>2013-4-27</span></li>
+					<li><a title="女子生吃鱼胆致肾衰竭">女子生吃鱼胆致肾衰竭</a><span>2013-4-27</span></li>
+					<li><a title="2岁男孩掉入污水池溺亡">2岁男孩掉入污水池溺亡</a><span>2013-4-27</span></li>
+					<li><a title="部分私密会所藏于居民小区 消费一桌几千上万元">部分私密会所藏于居民小区
+							消费一桌几千上万元</a><span>2013-4-27</span></li>
+				</ul>
+			</div>
+			<div class="commonList shadow hide" id="findEmployee-div">
+				<ul>
+					<li><a title="日媒称中国40多架军机曾在钓鱼岛周边护驾执法船">日媒称中国40多架军机曾在钓鱼岛周边护驾执法船</a><span>2013-4-27</span></li>
+					<li><a title="外交部要求菲方从8个中国岛礁撤走一切人员">外交部要求菲方从8个中国岛礁撤走一切人员</a><span>2013-4-27</span></li>
+					<li><a title="浙江增1例H7N9病例">浙江增1例H7N9病例</a><span>2013-4-27</span></li>
+					<li><a title="温州市财政局副局长因醉驾被刑拘">温州市财政局副局长因醉驾被刑拘</a><span>2013-4-27</span></li>
+					<li><a title="温州市长暗访电镀厂">温州市长暗访电镀厂</a><span>2013-4-27</span></li>
+					<li><a title="女子生吃鱼胆致肾衰竭">女子生吃鱼胆致肾衰竭</a><span>2013-4-27</span></li>
+					<li><a title="2岁男孩掉入污水池溺亡">2岁男孩掉入污水池溺亡</a><span>2013-4-27</span></li>
+					<li><a title="部分私密会所藏于居民小区 消费一桌几千上万元">部分私密会所藏于居民小区
+							消费一桌几千上万元</a><span>2013-4-27</span></li>
+					<li><a title="女子猛抽交警">女子猛抽交警</a><span>2013-4-27</span></li>
+					<li><a title="红会遭讽刺">红会遭讽刺</a><span>2013-4-27</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="scrollPics">
+			<div id="focus">
+				<ul>
+					<li><a href="#"><img src="../images/01.jpg"
+							alt="QQ商城焦点图效果下载" />QQ商城焦点图效果下载</a></li>
+					<li><a href="#"><img src="../images/02.jpg"
+							alt="QQ商城焦点图效果教程" /></a></li>
+					<li><a href="#"><img src="../images/03.jpg"
+							alt="jquery商城焦点图效果" /></a></li>
+					<li><a href="#"><img src="../images/04.jpg"
+							alt="jquery商城焦点图代码" /></a></li>
+					<li><a href="#"><img src="../images/05.jpg"
+							alt="jquery商城焦点图源码" /></a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="honorBoard">
+			<div class="honorTab honorBackground">
+				<span><a>光荣榜</a></span>
+			</div>
+			<div class="honorList" id="latestNews-div">
+				<ul>
+					<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a></li>
+					<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a></li>
+					<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a></li>
+					<li><a title="宁国市甲路镇退休老党员张长明">宁国市甲路镇退休老党员张长明</a></li>
+					<li><a title="泾县琴溪镇镇党代表桂民胜">泾县琴溪镇镇党代表桂民胜</a></li>
+					<li><a title="泾县昌桥乡村民黄学成">泾县昌桥乡村民黄学成</a></li>
+					<li><a title="旌德县版书乡村民舒光锋">旌德县版书乡村民舒光锋</a></li>
+					<li><a title="泾县昌桥乡村民黄学成">泾县昌桥乡村民黄学成</a></li>
+					<li><a title="旌德县版书乡村民舒光锋">旌德县版书乡村民舒光锋</a></li>
+					<li><a title="泾县昌桥乡村民黄学成">泾县昌桥乡村民黄学成</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="index-part-b">
+		<div id="index-part-b-left">
+			<div class="left-wrapper">
+				<div class="commonTab background">
+					<span class="select"><a>最新视频</a></span>
+				</div>
+				<div class="commonList shadow">
+					<ul>
+						<li><a><img src="../images/video_1.png" alt="李宁落泪送别李经纬" />
+								<p>李宁落泪送别李经纬</p></a></li>
+						<li><a><img src="../images/video_2.jpg" alt="买黄金ETF比金条省钱" />
+								<p>买黄金ETF比金条省钱</p></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="left-wrapper" style="height: 240px !important;">
+				<div class="commonTab background">
+					<span class="select"><a>政策指南</a></span>
+				</div>
+				<div class="commonList shadow leftSectionLineHeight">
+					<ul>
+						<li><a>下周三2013-5-1小礼堂</a></li>
+						<li><a>下周三2013-5-1小礼堂</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="index-part-b-right">
+			<div class="right-wrapper">
+				<div class="commonTab background">
+					<span class="select" id="about"><a>走近龙园</a></span> <span
+						id="landscape"><a>全景农村</a></span> <span id="newVillage"><a>新村新貌</a></span>
+				</div>
+				<div class="commonList shadow" id="about-div">
+					<ul>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+						<li><a title="宁国市甲路镇退休老党员张长明">宁国市甲路镇退休老党员张长明</a><span>2013-4-27</span></li>
+						<li><a title="泾县琴溪镇镇党代表桂民胜">泾县琴溪镇镇党代表桂民胜</a><span>2013-4-27</span></li>
+						<li><a title="芦山地震祭:伤城 民间总能预测地震是误解">芦山地震祭:伤城 民间总能预测地震是误解</a><span>2013-4-27</span></li>
+						<li><a title="媒体:至少138个县提'县改市'国家正征求意见">媒体:至少138个县提"县改市"
+								国家正征求意见</a><span>2013-4-27</span></li>
+						<li><a title="国博副馆长:圆明园12兽首是外国人做的水龙头">国博副馆长:圆明园12兽首是外国人做的水龙头</a><span>2013-4-27</span></li>
+						<li><a title="湖南确诊首例H7N9禽流感病例 全国121人感染">湖南确诊首例H7N9禽流感病例
+								全国121人感染</a><span>2013-4-27</span></li>
+						<li><a title="习近平已看多场中超 最大愿望是中国办世界杯">习近平已看多场中超
+								最大愿望是中国办世界杯</a><span>2013-4-27</span></li>
+					</ul>
+				</div>
+				<div class="commonList shadow hide" id="landscape-div">
+					<ul>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+						<li><a title="宁国市甲路镇退休老党员张长明">宁国市甲路镇退休老党员张长明</a><span>2013-4-27</span></li>
+						<li><a title="泾县琴溪镇镇党代表桂民胜">泾县琴溪镇镇党代表桂民胜</a><span>2013-4-27</span></li>
+						<li><a title="泾县昌桥乡村民黄学成">泾县昌桥乡村民黄学成</a><span>2013-4-27</span></li>
+						<li><a title="旌德县版书乡村民舒光锋">旌德县版书乡村民舒光锋</a><span>2013-4-27</span></li>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+					</ul>
+				</div>
+				<div class="commonList shadow hide" id="newVillage-div">
+					<ul>
+						<li><a title="泾县昌桥乡村民黄学成">泾县昌桥乡村民黄学成</a><span>2013-4-27</span></li>
+						<li><a title="旌德县版书乡村民舒光锋">旌德县版书乡村民舒光锋</a><span>2013-4-27</span></li>
+						<li><a title="日媒称中方曾出动40余架军机为8艘海监船护航">日媒称中方曾出动40余架军机为8艘海监船护航</a><span>2013-4-27</span></li>
+						<li><a title="法国总统上海行晚餐菜单：最爱10元萝卜汤圆">法国总统上海行晚餐菜单：最爱10元萝卜汤圆</a><span>2013-4-27</span></li>
+						<li><a title="北京官方:明天拥堵将超6小时 为上半年最堵日">北京官方:明天拥堵将超6小时
+								为上半年最堵日</a><span>2013-4-27</span></li>
+						<li><a title="一名美国人因触犯'反朝敌对罪'被朝鲜起诉">一名美国人因触犯"反朝敌对罪"被朝鲜起诉</a><span>2013-4-27</span></li>
+						<li><a title="男子冒充市委书记行骗 没去北京开两会露马脚">男子冒充市委书记行骗
+								没去北京开两会露马脚</a><span>2013-4-27</span></li>
+						<li><a title="村干部酒驾被查 称为乡政府喝酒为人民喝酒">村干部酒驾被查 称为乡政府喝酒为人民喝酒</a><span>2013-4-27</span></li>
+						<li><a title="原铁道部去年赚近2亿 负债2.79万亿"> 原铁道部去年赚近2亿 负债2.79万亿</a><span>2013-4-27</span></li>
+
+					</ul>
+				</div>
+			</div>
+			<!-- duplicated mock data -->
+			<div class="right-wrapper">
+				<div class="commonTab background">
+					<span class="select" id="festival"><a>节事活动</a></span> <span
+						id="culturalLegacy"><a>文化遗产</a></span>
+				</div>
+				<div class="commonList shadow" id="festival-div">
+					<ul>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+						<li><a title="宁国市甲路镇退休老党员张长明">宁国市甲路镇退休老党员张长明</a><span>2013-4-27</span></li>
+						<li><a title="泾县琴溪镇镇党代表桂民胜">泾县琴溪镇镇党代表桂民胜</a><span>2013-4-27</span></li>
+						<li><a title="泾县昌桥乡村民黄学成">泾县昌桥乡村民黄学成</a><span>2013-4-27</span></li>
+						<li><a title="旌德县版书乡村民舒光锋">旌德县版书乡村民舒光锋</a><span>2013-4-27</span></li>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+
+					</ul>
+				</div>
+				<div class="commonList shadow hide" id="culturalLegacy-div">
+					<ul>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+						<li><a title="宁国市甲路镇退休老党员张长明">宁国市甲路镇退休老党员张长明</a><span>2013-4-27</span></li>
+						<li><a title="泾县琴溪镇镇党代表桂民胜">泾县琴溪镇镇党代表桂民胜</a><span>2013-4-27</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="right-wrapper">
+				<div class="commonTab background">
+					<span class="select" id="market"><a>赶集</a></span><span id="tourism"><a>农村旅游</a></span>
+					<span id="farmhouseJoy"><a>农家乐</a></span>
+				</div>
+				<div class="commonList shadow" id="market-div">
+					<ul>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+						<li><a title="宁国市甲路镇退休老党员张长明">宁国市甲路镇退休老党员张长明</a><span>2013-4-27</span></li>
+						<li><a title="泾县琴溪镇镇党代表桂民胜">泾县琴溪镇镇党代表桂民胜</a><span>2013-4-27</span></li>
+						<li><a title="泾县昌桥乡村民黄学成">泾县昌桥乡村民黄学成</a><span>2013-4-27</span></li>
+						<li><a title="旌德县版书乡村民舒光锋">旌德县版书乡村民舒光锋</a><span>2013-4-27</span></li>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+
+					</ul>
+				</div>
+				<div class="commonList shadow" id="tourism-div">
+					<ul>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+						<li><a title="宁国市甲路镇退休老党员张长明">宁国市甲路镇退休老党员张长明</a><span>2013-4-27</span></li>
+						<li><a title="泾县琴溪镇镇党代表桂民胜">泾县琴溪镇镇党代表桂民胜</a><span>2013-4-27</span></li>
+						<li><a title="泾县昌桥乡村民黄学成">泾县昌桥乡村民黄学成</a><span>2013-4-27</span></li>
+						<li><a title="旌德县版书乡村民舒光锋">旌德县版书乡村民舒光锋</a><span>2013-4-27</span></li>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+
+					</ul>
+				</div>
+				<div class="commonList shadow hide" id="farmhouseJoy-div">
+					<ul>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+						<li><a title="宁国市甲路镇退休老党员张长明">宁国市甲路镇退休老党员张长明</a><span>2013-4-27</span></li>
+						<li><a title="泾县琴溪镇镇党代表桂民胜">泾县琴溪镇镇党代表桂民胜</a><span>2013-4-27</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="right-wrapper">
+				<div class="commonTab background">
+					<span class="select" id="nostalgia"><a>游子情</a></span> <span
+						id="mutualAssist"><a>我要帮扶</a></span><span id="charityExchange"><a>慈善易物</a></span>
+				</div>
+				<div class="commonList shadow" id="nostalgia-div">
+					<ul>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+						<li><a title="宁国市甲路镇退休老党员张长明">宁国市甲路镇退休老党员张长明</a><span>2013-4-27</span></li>
+						<li><a title="泾县琴溪镇镇党代表桂民胜">泾县琴溪镇镇党代表桂民胜</a><span>2013-4-27</span></li>
+						<li><a title="泾县昌桥乡村民黄学成">泾县昌桥乡村民黄学成</a><span>2013-4-27</span></li>
+						<li><a title="旌德县版书乡村民舒光锋">旌德县版书乡村民舒光锋</a><span>2013-4-27</span></li>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+
+					</ul>
+				</div>
+				<div class="commonList shadow hide" id="mutualAssist-div">
+					<ul>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+						<li><a title="郎溪县姚村乡永丰村刘家冲78岁村民李福信">郎溪县姚村乡永丰村刘家冲78岁村民李福信</a><span>2013-4-27</span></li>
+						<li><a title="宁国市胡乐镇鸿门村农妇余婉媚">宁国市胡乐镇鸿门村农妇余婉媚</a><span>2013-4-27</span></li>
+						<li><a title="宁国市甲路镇退休老党员张长明">宁国市甲路镇退休老党员张长明</a><span>2013-4-27</span></li>
+						<li><a title="泾县琴溪镇镇党代表桂民胜">泾县琴溪镇镇党代表桂民胜</a><span>2013-4-27</span></li>
+					</ul>
+				</div>
+				<div class="commonList shadow hide" id="charityExchange-div">
+					<ul>
+						<li><a title="宣州区向阳镇杨村黄苗村民组村民钟远海">宣州区向阳镇杨村黄苗村民组村民钟远海</a><span>2013-4-27</span></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- END inc_index_body.html -->
+
+	<!-- START inc_footer.html -->
+	<div id="footerNav">
+		<div id="footerMenu">
+			<ul>
+				<li><a>关于我们 </a>┊</li>
+				<li><a>网站地图 </a>┊</li>
+				<li><a>联系我们 </a>┊</li>
+				<li><a>广告服务 </a></li>
+			</ul>
+		</div>
+		<p>Copyright 2013, All Rights Reserved</p>
+	</div>
+	<!-- END inc_footer.html -->
 </body>
 </html>

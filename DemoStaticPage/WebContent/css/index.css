@@ -1,0 +1,359 @@
+#index-part-a {
+	width: 1000px;
+	height: 320px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#index-part-a div.news {
+	position: relative;
+	width: 280px;
+	height: 300px;
+	float: left;
+}
+
+.commonTab {
+	position: absolute;
+	font-size: 16px;
+	font-weight: bold;
+	color: #006400;
+	width: inherit;
+	height: 30px;
+	border-bottom: 1px solid #75a960;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.background {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(148, 202, 67)
+		), to(rgb(206, 247, 145) ) );
+	background-image: -webkit-linear-gradient(top, rgb(148, 202, 67),
+		rgb(206, 247, 145) );
+	background-image: -moz-linear-gradient(top, rgb(148, 202, 67),
+		rgb(206, 247, 145) );
+	background-image: -o-linear-gradient(top, rgb(148, 202, 67),
+		rgb(206, 247, 145) );
+	background-image: -ms-linear-gradient(top, rgb(148, 202, 67),
+		rgb(206, 247, 145) );
+	background-image: linear-gradient(top, rgb(148, 202, 67),
+		rgb(206, 247, 145) );
+}
+
+.commonTab span {
+	padding: 0 13px;
+	line-height: 30px;
+	height: 30px;
+	float: left;
+	cursor: pointer;
+}
+
+.commonTab a:hover {
+	color: #ec6801;
+}
+
+.select {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #75a960;
+	border-left: 1px solid #75a960;
+	border-right: 1px solid #75a960;
+	background: #fff;
+}
+
+.hide {
+	display: none;
+}
+
+.commonList {
+	position: absolute;
+	font-size: 14px;
+	color: #777777;
+	top: 30px;
+	width: inherit;
+	max-height: 300px;
+}
+
+.commonList ul li span {
+	right: 10px;
+	position: absolute;
+}
+
+.shadow {
+	-webkit-box-shadow: #75a960 0px 3px 5px;
+	-moz-box-shadow: #75a960 0px 3px 5px;
+	/* box-shadow: #75a960 0px 3px 3px; */
+}
+
+.commonList ul {
+	padding-top: 0px;
+	padding-left: 15px;
+	padding-bottom: 15px;
+}
+
+.commonList ul li {
+	padding-top: 10px;
+	width: inherit;
+}
+
+.commonList ul li:hover {
+	color: #ec6801;
+	text-decoration: underline;
+}
+
+.commonList ul li a {
+	display: inline-block;
+	max-width: 170px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis; /* for IE */
+	-moz-text-overflow: ellipsis; /* for Firefox,mozilla */
+	-webkit-text-overflow: ellipsis; /* for Safari,Swift*/
+	cursor: pointer;
+}
+
+.commonList ul li a:hover {
+	text-decoration: underline;
+}
+
+#index-part-a div.scrollPics {
+	width: 480px;
+	height: 300px;
+	margin-left: 20px;
+	float: left;
+	position: relative;
+}
+
+/****************** START scroll pictures*******************/
+#focus {
+	width: 480px;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+
+#focus ul {
+	height: 380px;
+	position: absolute;
+}
+
+#focus ul li {
+	float: left;
+	width: 480px;
+	height: 280px;
+	overflow: hidden;
+	position: relative;
+	background: #000;
+}
+
+#focus ul li div {
+	position: absolute;
+	overflow: hidden;
+}
+
+#focus .btnBg {
+	position: absolute;
+	width: 480px;
+	height: 20px;
+	left: 0;
+	bottom: 0;
+	background: #000;
+}
+
+#focus .btn {
+	position: absolute;
+	width: 460px;
+	height: 10px;
+	padding: 5px 10px;
+	right: 0;
+	bottom: 0;
+	text-align: right;
+}
+
+#focus .btn span {
+	display: inline-block;
+	_display: inline;
+	_zoom: 1;
+	width: 25px;
+	height: 10px;
+	_font-size: 0;
+	margin-left: 5px;
+	cursor: pointer;
+	background: #fff;
+}
+
+#focus .btn span.on {
+	background: #fff;
+}
+
+#focus .preNext {
+	width: 45px;
+	height: 100px;
+	position: absolute;
+	top: 90px;
+	background: url(../images/sprite.png) no-repeat 0 0;
+	cursor: pointer;
+}
+
+#focus .pre {
+	left: 0;
+}
+
+#focus .next {
+	right: 0;
+	background-position: right top;
+}
+
+/****************** END scroll pictures*******************/
+#honorBoard {
+	width: 200px;
+	height: 300px;
+	margin-left: 20px;
+	position: relative;
+	float: left;
+}
+
+#honorBoard div.honorTab {
+	position: absolute;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fbff89;
+	width: 200px;
+	height: 30px;
+	border-bottom: 1px solid #fbff89;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+#honorBoard div.honorTab span {
+	padding: 0 13px;
+	line-height: 30px;
+	height: 30px;
+	cursor: pointer;
+	margin-left: 65px;
+}
+
+#honorBoard div.honorList {
+	font-size: 14px;
+	color: #777777;
+	top: 30px;
+	width: 200px;
+	-webkit-box-shadow: #fd5f00 0px 3px 5px;
+	-moz-box-shadow: #fd5f00 0px 3px 5px;
+	position: absolute;
+}
+
+.honorBackground {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(253, 95, 0)
+		), to(rgb(253, 182, 0) ) );
+	background-image: -webkit-linear-gradient(top, rgb(253, 95, 0),
+		rgb(253, 182, 0) );
+	background-image: -moz-linear-gradient(top, rgb(253, 95, 0),
+		rgb(253, 182, 0) );
+	background-image: -o-linear-gradient(top, rgb(253, 95, 0),
+		rgb(253, 182, 0) );
+	background-image: -ms-linear-gradient(top, rgb(253, 95, 0),
+		rgb(253, 182, 0) );
+	background-image: linear-gradient(top, rgb(253, 95, 0), rgb(253, 182, 0)
+		);
+}
+
+#honorBoard div.honorList ul {
+	padding-top: 0px;
+	padding-left: 15px;
+	padding-bottom: 15px;
+}
+
+#honorBoard div.honorList ul li {
+	padding-top: 10px;
+	width: inherit;
+}
+
+#honorBoard div.honorList ul li:hover {
+	color: #ec6801;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#honorBoard div.honorList ul li a {
+	display: inline-block;
+	max-width: 170px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis; /* for IE */
+	-moz-text-overflow: ellipsis; /* for Firefox,mozilla */
+	-webkit-text-overflow: ellipsis; /* for Safari,Swift*/
+}
+
+#honorBoard div.honorList ul li a:hover {
+	text-decoration: underline;
+}
+
+#index-part-b {
+	width: 1000px;
+	margin: 0 auto;
+	display: block;
+}
+
+#index-part-b-left {
+	width: 240px;
+	display: inline;
+	float: left;
+}
+
+.left-wrapper {
+	width: inherit;
+	height: 340px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.left-wrapper .commonList {
+	max-height: 310px !important;
+}
+
+.left-wrapper ul li {
+	margin-top: 5px;
+	margin-bottom: -15px;
+}
+
+.left-wrapper ul li a {
+	max-width: 210px;
+	margin-left: 5px;
+	/* margin-top: 5px; */
+	cursor: pointer;
+}
+
+.left-wrapper ul li a p {
+	margin-top: 1px;
+	text-align: center;
+	font-size: 13px;
+}
+
+.left-wrapper ul li img {
+	width: 200px;
+	height: 120px;
+}
+
+.leftSectionLineHeight ul li {
+	height: 25px;
+}
+
+#index-part-b-right {
+	float: right;
+	width: 760px;
+}
+
+.right-wrapper {
+	width: 360px;
+	height: 300px;
+	position: relative;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	float: right;
+}
+
+.right-wrapper .commonList ul li a {
+	max-width: 240px !important;
+}
