@@ -306,7 +306,7 @@
 	width: inherit;
 	height: 340px;
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .left-wrapper .commonList {
@@ -319,10 +319,13 @@
 }
 
 .left-wrapper ul li a {
-	max-width: 210px;
+	width: 210px;
 	margin-left: 5px;
-	/* margin-top: 5px; */
 	cursor: pointer;
+	max-width: none !important;
+	height: 130px;
+	margin-bottom: 10px;
+	position: relative;
 }
 
 .left-wrapper ul li a p {
@@ -333,7 +336,44 @@
 
 .left-wrapper ul li img {
 	width: 200px;
-	height: 120px;
+	height: 130px;
+}
+
+.videoIcon {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 65px;
+	left: 5px;
+	cursor: pointer;
+	background: url(../images/play_icon_normal.png) no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,
+		sizingMethod=scale, src='http://i2.sinaimg.cn/dy/deco/2013/0316/play_icon_normal.png'
+		);
+	_background: none;
+}
+
+.videlSpan {
+	height: 24px;
+	line-height: 24px;
+	top: 106px;
+	background: none 9;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=   
+		        0, startColorstr=            '#9A000000', endColorstr= 
+		          '#9A000000' ) 9;
+	background-color: rgba(0, 0, 0, .6);
+	left: 0px;
+	right: auto !important;
+	position: absolute !important;
+	color: #fff;
+}
+
+.left-wrapper ul li a:hover span.videlSpan {
+	color: #ec6801;
+}
+
+.left-wrapper ul li a:hover .videoIcon {
+	background: url(../images/play_icon_hover.png) no-repeat;
 }
 
 .leftSectionLineHeight ul li {

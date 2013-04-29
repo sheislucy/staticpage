@@ -122,9 +122,9 @@ ul,ol {
 
 #mainNav {
 	height: 100px;
-	width: 100%;
+	width: 1000px;
 	padding-top: 30px;
-	min-width: 1000px;
+	margin: 0 auto;
 }
 
 #mainNav div.navWrapper {
@@ -265,7 +265,7 @@ ul,ol {
 #footerNav #footerMenu {
 	height: 30px;
 	margin-top: 15px;
-	border-top: 1px solid #75a960;
+	border-top: 1px solid #c4e5c1;
 }
 
 #footerNav ul {
@@ -282,4 +282,24 @@ ul,ol {
 
 #footerNav p {
 	margin: 0;
+}
+
+.position {
+	width: 1000px;
+	font-size: 13px;
+	color: #006400;
+	border: 1px solid #c4e5c1;
+	line-height: 32px;
+	text-indent: 10px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.position a {
+	cursor: pointer;
+}
+
+.position a:hover {
+	color: #ec6801;
 }
