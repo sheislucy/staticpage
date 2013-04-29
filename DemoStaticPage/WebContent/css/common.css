@@ -229,6 +229,7 @@ ul,ol {
 #menuNav div.menu-block a {
 	color: #006400;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 #menuNav div.menu-block a:hover {
@@ -284,7 +285,7 @@ ul,ol {
 	margin: 0;
 }
 
-.position {
+.title {
 	width: 1000px;
 	font-size: 13px;
 	color: #006400;
@@ -296,10 +297,21 @@ ul,ol {
 	margin-right: auto;
 }
 
-.position a {
+.title .position {
+	display: inline;
+}
+
+.title .position a {
 	cursor: pointer;
 }
 
-.position a:hover {
+.title .position a:hover {
 	color: #ec6801;
+}
+
+.title .gallery-layout-icon {
+	display: inline;
+	float: right;
+	line-height: 27px;
+	margin-right: 5px;
 }

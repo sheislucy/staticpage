@@ -1,6 +1,7 @@
 a:hover {
 	color: #ec6801;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 a:visited {
@@ -15,8 +16,18 @@ a:visited {
 	margin-right: auto;
 }
 
+#leftPanel {
+	width: 160px;
+	float: left;
+}
+
+#rightPanel {
+	width: 840px;
+	float: left;
+}
+
 #sortWrapper {
-	width: 1000px;
+	width: 840px;
 	margin: 0 auto;
 	margin-top: 10px;
 	clear: both;
@@ -30,6 +41,12 @@ a:visited {
 .gallery-sort-tab a:hover {
 	color: #ec6801;
 	text-decoration: none;
+}
+
+.gallery-sort-tab a.more {
+	font-size: 13px;
+	float: right;
+	margin-right: 10px;
 }
 
 .gallery-sort-tab {
@@ -84,4 +101,76 @@ a:visited {
 
 .gallery-sort-list ul li a:hover {
 	color: #ec6801;
+}
+
+/*************picture scroll *******************/
+#focus {
+	position: relative;
+	width: 1000px;
+	height: 600px;
+	overflow: hidden;
+	margin: 10px auto;
+}
+
+#focus ul {
+	height: 600px;
+	position: absolute;
+}
+
+#focus ul li {
+	float: left;
+	width: 1000px;
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+	background: #000;
+}
+
+#focus ul li div {
+	position: absolute;
+	overflow: hidden;
+}
+
+#focus .btnBg {
+	position: absolute;
+	width: 1000px;
+	height: 40px;
+	left: 0;
+	bottom: 0;
+	background: #000;
+}
+
+#focus .button {
+	position: absolute;
+	height: 30px;
+	left: 10px;
+	bottom: 4px;
+}
+
+#focus .button span {
+	float: left;
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 16px;
+	margin-right: 10px;
+	cursor: pointer;
+	background: #716564;
+	color: #ffffff;
+	/* 	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px; */
+	font-family: Arial;
+}
+
+#focus .button span a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#focus .button span.on {
+	background: #B91919;
+	color: #ffffff;
 }
