@@ -26,18 +26,18 @@
 }
 
 .background {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(148, 202, 67)
-		), to(rgb(206, 247, 145) ) );
-	background-image: -webkit-linear-gradient(top, rgb(148, 202, 67),
-		rgb(206, 247, 145) );
-	background-image: -moz-linear-gradient(top, rgb(148, 202, 67),
-		rgb(206, 247, 145) );
-	background-image: -o-linear-gradient(top, rgb(148, 202, 67),
-		rgb(206, 247, 145) );
-	background-image: -ms-linear-gradient(top, rgb(148, 202, 67),
-		rgb(206, 247, 145) );
-	background-image: linear-gradient(top, rgb(148, 202, 67),
-		rgb(206, 247, 145) );
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)
+		), to(rgb(211, 236, 209) ) );
+	background-image: -webkit-linear-gradient(top, rgb(255, 255, 255),
+		rgb(211, 236, 209) );
+	background-image: -moz-linear-gradient(top, rgb(255, 255, 255),
+		rgb(211, 236, 209) );
+	background-image: -o-linear-gradient(top, rgb(255, 255, 255),
+		rgb(211, 236, 209) );
+	background-image: -ms-linear-gradient(top, rgb(255, 255, 255),
+		rgb(211, 236, 209) );
+	background-image: linear-gradient(top, rgb(255, 255, 255),
+		rgb(211, 236, 209) );
 }
 
 .commonTab span {
@@ -73,6 +73,7 @@
 	top: 30px;
 	width: inherit;
 	max-height: 300px;
+	border-left: 1px #c4e5c1 solid;
 }
 
 .commonList ul li span {
@@ -81,8 +82,8 @@
 }
 
 .shadow {
-	-webkit-box-shadow: #75a960 0px 3px 5px;
-	-moz-box-shadow: #75a960 0px 3px 5px;
+	-webkit-box-shadow: #75a960 1px 2px 2px;
+	-moz-box-shadow: #75a960 1px 2px 2px;
 	/* box-shadow: #75a960 0px 3px 3px; */
 }
 

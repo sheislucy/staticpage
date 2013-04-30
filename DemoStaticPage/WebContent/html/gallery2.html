@@ -6,20 +6,23 @@
 <meta name="keywords" content="龙园村CMS演示" />
 <link href="../css/common.css" rel="stylesheet" type="text/css" />
 <link href="../css/gallery.css" rel="stylesheet" type="text/css" />
+<link href="../css/sliding_styles.css" rel="stylesheet" type="text/css" />
 <link href="../css/bootstrap-icon.css" rel="stylesheet" type="text/css" />
 <script language="javascript" type="text/javascript"
 	src="../js/jquery-1.9.1.js"></script>
+<script language="javascript" type="text/javascript"
+	src="../js/sliding_effect.js"></script>
 <title>图片墙 - Prototype</title>
 <script>
 	$(function() {
 		$("#film").click(function() {
-			window.open("gallery2.html");
+			window.open("gallery.html");
 			//$(this).addClass("active");
 			//$(this).siblings.removeClass("active");
 		});
 
 		$("#grid").click(function() {
-			window.open("gallery.html");
+			window.open("gallery2.html");
 			//$(this).addClass("active");
 			//$(this).siblings.removeClass("active");
 		});
@@ -147,10 +150,11 @@
 			您现在正在浏览： <a>美丽龙园</a><span>&nbsp;&gt;&nbsp;</span><a>新村新貌</a>
 		</div>
 		<div class="gallery-layout-icon">
+			<span>切换布局</span>
 			<button id="film" class="btn " title="幻灯片" rel="tooltip">
 				<i class="icon-film"></i>
 			</button>
-			<button id="grid" class="btn active" title="列表布局" rel="tooltip">
+			<button id="grid" class="btn active" title="列表" rel="tooltip">
 				<i class="icon-th"></i>
 			</button>
 		</div>
@@ -160,17 +164,20 @@
 
 	<div id="gallery">
 		<div id="leftPanel">
-			<span class="gallery-sort-tab">图片分类</span>
-			<ul>
-				<li><a>分类1</a></li>
-				<li><a>分类2</a></li>
-				<li><a>分类3</a></li>
+			<!-- <div class="gallery-sort-tab width120">
+				<span>规划图分类</span>
+			</div> -->
+			<ul id="sliding-navigation">
+				<li class="sliding-element"><h3>规划图分类</h3></li>
+				<li class="sliding-element"><a class="slidingSelected">分类1</a></li>
+				<li class="sliding-element"><a>分类2</a></li>
+				<li class="sliding-element"><a>分类3</a></li>
 			</ul>
 		</div>
 		<div id="rightPanel">
 			<div id="sortWrapper">
 				<div class="gallery-sort-tab">
-					<a href="#"><b>分类1</b></a><!--  <a class="more" href="#"><b>更多</b></a> -->
+					<span>分类1</span>
 				</div>
 				<div class="gallery-sort-list">
 					<ul>
@@ -197,8 +204,12 @@
 								<h5>旅游小姐遭网友吐槽</h5></a></li>
 					</ul>
 				</div>
-				
-				<div class="paging">共6条记录 1/1页  首页 上一页 下一页 尾页  第页</div>
+
+			</div>
+			<div class="paging">
+				<p>
+					共 7 条记录 1/1页 <a>首页</a> <a>上一页</a> <a>下一页</a> <a>尾页</a> 第 1 页
+				</p>
 			</div>
 		</div>
 	</div>

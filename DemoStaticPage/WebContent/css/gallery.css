@@ -9,6 +9,18 @@ a:visited {
 	text-decoration: none;
 }
 
+.title .gallery-layout-icon {
+	display: inline;
+	float: right;
+	line-height: 27px;
+	margin-right: 5px;
+}
+
+.title .gallery-layout-icon span {
+	margin-top: 2px;
+	vertical-align: middle;
+}
+
 #gallery {
 	width: 1000px;
 	margin-top: 10px;
@@ -19,53 +31,79 @@ a:visited {
 #leftPanel {
 	width: 160px;
 	float: left;
+	margin-top: 10px;
 }
+
+.width120 {
+	width: 120px;
+}
+
+/* #leftPanel ul {
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 120px;
+	background: #d3ecd1 50% 50% repeat-x;
+}
+
+#leftPanel ul li {
+	width: 120px;
+	margin-bottom: 10px;
+	text-align: center;
+	height: 20px;
+	font-size: 13px;
+	border: 1px solid #d3ecd1;
+	background: #d3ecd1;
+}
+
+#leftPanel ul li a {
+	vertical-align: middle;
+}
+
+#leftPanel ul li:hover {
+	border: 1px solid #75a960;
+	background: #eaf7b1;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+} */
 
 #rightPanel {
 	width: 840px;
 	float: left;
+	margin-top: 10px;
 }
 
 #sortWrapper {
 	width: 840px;
 	margin: 0 auto;
-	margin-top: 10px;
 	clear: both;
 }
 
-.gallery-sort-tab a {
+.gallery-sort-tab {
 	color: #006400;
-	text-decoration: none;
-}
-
-.gallery-sort-tab a:hover {
-	color: #ec6801;
-	text-decoration: none;
-}
-
-.gallery-sort-tab a.more {
-	font-size: 13px;
-	float: right;
-	margin-right: 10px;
+	font-weight: bold;
 }
 
 .gallery-sort-tab {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(196, 229, 193)
-		), to(rgb(176, 206, 173) ) );
-	background-image: -webkit-linear-gradient(top, rgb(196, 229, 193),
-		rgb(176, 206, 173) );
-	background-image: -moz-linear-gradient(top, rgb(196, 229, 193),
-		rgb(176, 206, 173) );
-	background-image: -o-linear-gradient(top, rgb(196, 229, 193),
-		rgb(176, 206, 173) );
-	background-image: -ms-linear-gradient(top, rgb(196, 229, 193),
-		rgb(176, 206, 173) );
-	background-image: linear-gradient(top, rgb(196, 229, 193),
-		rgb(176, 206, 173) );
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)
+		), to(rgb(211, 236, 209) ) );
+	background-image: -webkit-linear-gradient(top, rgb(255, 255, 255),
+		rgb(211, 236, 209) );
+	background-image: -moz-linear-gradient(top, rgb(255, 255, 255),
+		rgb(211, 236, 209) );
+	background-image: -o-linear-gradient(top, rgb(255, 255, 255),
+		rgb(211, 236, 209) );
+	background-image: -ms-linear-gradient(top, rgb(255, 255, 255),
+		rgb(211, 236, 209) );
+	background-image: linear-gradient(top, rgb(255, 255, 255),
+		rgb(211, 236, 209) );
 	height: 30px;
 	line-height: 30px;
 	font-size: 14px;
 	text-indent: 10px;
+	border-bottom: 1px solid #b0cead;
 }
 
 .gallery-sort-list {
@@ -101,6 +139,13 @@ a:visited {
 
 .gallery-sort-list ul li a:hover {
 	color: #ec6801;
+}
+
+.paging {
+	position: relative;
+	clear: both;
+	text-align: center;
+	font-size: 12px;
 }
 
 /*************picture scroll *******************/
