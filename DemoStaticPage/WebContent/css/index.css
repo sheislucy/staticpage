@@ -144,6 +144,8 @@
 #focus ul {
 	height: 380px;
 	position: absolute;
+	margin: 0;
+	padding: 0;
 }
 
 #focus ul li {
@@ -254,6 +256,7 @@
 	box-shadow: #fd5f00 0px 3px 5px;
 	position: absolute;
 	behavior: url(../css/PIE.htc);
+	margin-top: 0px;
 }
 
 .honorBackground {
@@ -276,6 +279,7 @@
 	padding-top: 0px;
 	padding-left: 15px;
 	padding-bottom: 15px;
+	margin-top: 0px;
 }
 
 #honorBoard div.honorList ul li {
@@ -372,8 +376,12 @@
 	line-height: 24px;
 	top: 106px;
 	background: none 9;
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=       
-		        0, startColorstr=                '#9A000000', endColorstr=
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=   
+		        
+		        0, startColorstr=                     '#9A000000', endColorstr=
+		
+		
+		  
 		    
 		          '#9A000000' ) 9;
 	background-color: rgba(0, 0, 0, .6);
