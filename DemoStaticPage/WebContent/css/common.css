@@ -25,7 +25,7 @@ ul,ol {
 	-moz-box-shadow: #666 0px 0px 10px;
 	box-shadow: #666 0px 0px 10px;
 	background: #fff;
-	behavior: url(/PIE.htc);
+	behavior: url(../css/PIE.htc);
 	margin: 0px auto;
 	z-index: 9999;
 }
@@ -109,6 +109,7 @@ ul,ol {
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 	color: #555555;
+	behavior: url(../css/PIE.htc);
 }
 
 #headerNav div.loginWrapper div.loginBtn input:hover {
@@ -154,6 +155,7 @@ ul,ol {
 	float: left;
 	border-top-left-radius: 3px;
 	border-bottom-left-radius: 3px;
+	behavior: url(../css/PIE.htc);
 }
 
 #mainNav div.navWrapper div.searchInput input {
@@ -179,6 +181,7 @@ ul,ol {
 	color: #555555;
 	border-top-right-radius: 3px;
 	border-bottom-right-radius: 3px;
+	behavior: url(../css/PIE.htc);
 }
 
 #mainNav div.navWrapper div.searchBtn input:hover {
@@ -198,6 +201,7 @@ ul,ol {
 	margin: 0 auto;
 	display: block;
 	height: 150px;
+	background: url(../images/menuBar.png);
 }
 
 #menuNav div.line {
@@ -221,12 +225,14 @@ ul,ol {
 	float: left;
 	margin-left: 0;
 	margin-top: 18px;
+	width: 120px;
+	position: absolute;
 }
 
-#menuNav div.menu-block div.primary li {
-	padding-right: 10px;
+#menuNav div.menu-block div.primary span {
+	margin-left: 20px;
 	width: 100px;
-	text-align: right;
+	float: left;
 }
 
 #menuNav div.menu-block a {
@@ -243,8 +249,16 @@ ul,ol {
 #menuNav div.menu-block div.secondary {
 	font-size: 14px;
 	display: block;
-	margin-left: 110px;
+	float: right;
+	margin-right: 10px;
+	width: 70px;
+}
+
+#menuNav div.menu-block div.secondary ul {
+	float: left;
+	margin-left: 0px;
 	margin-top: 10px;
+	padding-left: 0px;
 }
 
 #menuNav div.menu-block div.secondary li {
@@ -288,13 +302,12 @@ ul,ol {
 	margin: 0;
 }
 
-.title {
+div.title {
 	width: 1000px;
 	font-size: 13px;
 	color: #006400;
 	border: 1px solid #c4e5c1;
 	line-height: 32px;
-	text-indent: 10px;
 	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
@@ -302,6 +315,7 @@ ul,ol {
 
 .title .position {
 	display: inline;
+	margin-left: 10px;
 }
 
 .title .position a {

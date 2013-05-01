@@ -1,9 +1,10 @@
 $(document).ready(function() {
 	slide("#sliding-navigation", 25, 15, 150, .8);
-	$(link_elements).each(function(i) {
+
+	$("#sliding-navigation" + " li.sliding-element").each(function(i) {
 		$(this).click(function() {
-			$(this).addClass("slidingSelected");
-			$(this).siblings().removeClass("slidingSelected");
+			$(this).find(" a").addClass("slidingSelected");
+			$(this).siblings().find(" a").removeClass("slidingSelected");
 		});
 	});
 });

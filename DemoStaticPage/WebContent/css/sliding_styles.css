@@ -13,8 +13,10 @@
 ul#sliding-navigation {
 	list-style: none;
 	font-size: .75em;
-	margin-top: 50px;
+	margin-top: 60px;
 	padding: 0;
+	margin-left: 10px;
+	opacity: 0.8;
 }
 
 ul#sliding-navigation li.sliding-element h3,ul#sliding-navigation li.sliding-element a
@@ -44,6 +46,6 @@ ul#sliding-navigation li.sliding-element a:hover {
 }
 
 .slidingSelected {
-	color: #ec6801;
+	color: #ec6801 !important;
 	padding-left: 25px !important;
 }
