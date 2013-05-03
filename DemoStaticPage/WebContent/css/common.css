@@ -49,7 +49,7 @@ ul,ol {
 }
 
 #headerNav div.loginWrapper {
-	width: 300px;
+	*width: 500px;
 	font-size: 13px;
 	position: relative;
 	float: right;
@@ -122,6 +122,26 @@ ul,ol {
 	cursor: pointer;
 	background: #f8fcf3;
 	color: #000;
+}
+
+#headerNav div.loginWrapper div.register {
+	margin-top: 4px;
+	margin-left: 25px;
+	font-size: 13px;
+	position: relative;
+	float: left;
+	vertical-align: middle;
+	font-size: 13px;
+}
+
+#headerNav div.loginWrapper div.register a {
+	color: #006400;
+	text-decoration: none;
+}
+
+#headerNav div.loginWrapper div.register a:hover {
+	color: #ec6801;
+	text-decoration: underline;
 }
 
 #mainNav {
