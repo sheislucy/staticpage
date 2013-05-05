@@ -292,6 +292,7 @@ ul,ol {
 
 /*******************footer********************/
 #footerNav {
+	clear: both;
 	width: 1000px;
 	overflow: hidden;
 	text-align: center;

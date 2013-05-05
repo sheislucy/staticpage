@@ -1,0 +1,130 @@
+@CHARSET "UTF-8";
+/*Container*/
+.container {
+	width: 1000px;
+	margin: 10px auto;
+	background: #FFF;
+	*padding: 25px;
+	border: 1px solid #c4e5c1;
+	min-height: 400px;
+	height: auto;
+	position: relative;
+	background: url(../images/wall_bg.png) repeat;
+}
+
+.part-a {
+	width: 1000px;
+	margin: 10px auto;
+}
+
+.part-a input {
+	border: 1px solid #75a960;
+	background: #cef791;
+	color: #222;
+}
+
+.part-a input:hover {
+	cursor: pointer;
+	background: #eaf7b1;
+	color: #000;
+}
+
+.part-a input:active {
+	cursor: pointer;
+	background: #f8fcf3;
+	color: #000;
+}
+
+.part-a .addWish {
+	height: 110px;
+	width: 202px;
+	border: 1px solid #75a960;
+}
+
+.part-a .addWish textarea {
+	border: 1px solid #75a960;
+}
+
+.wall_paste {
+	overflow: hidden;
+	width: 169px;
+	cursor: move;
+	position: absolute;
+	min-height: 167px;
+	font-size: 12px;
+	-webkit-box-shadow: #444 2px 2px 9px;
+	-moz-box-shadow: #444 2px 2px 9px;
+	box-shadow: #444 2px 2px 9px;
+	background: #fff;
+	behavior: url(../css/PIE.htc);
+	*-webkit-box-shadow: 2px 2px 9px rgba(33, 33, 33, .7);
+}
+
+.wall_paste:hover {
+	opacity: 0.8;
+	filter: alpha(opacity =                 95);
+}
+
+.yellow {
+	background: #ffc;
+}
+
+.green {
+	background: #cfc;
+}
+
+.blue {
+	background: #ccf;
+}
+
+.purple {
+	background: #eaafe3;
+}
+
+.red {
+	background: #f79292;
+}
+
+.orange {
+	background: #f8c6a7;
+}
+
+.wishTitle {
+	padding-right: 0px;
+	display: block;
+	padding-left: 0px;
+	font-weight: bold;
+	font-size: 12px;
+	padding-bottom: 0px;
+	width: 130px;
+	color: #2b2b2b;
+	padding-top: 12px;
+	height: 20px;
+	text-align: center;
+}
+
+.wall_close {
+	float: right;
+	margin: 7px 7px 0px 0px;
+}
+
+.text {
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 4px;
+	overflow: hidden;
+	color: #2b2b2b;
+	line-height: 20px;
+	padding-top: 0px;
+}
+
+p.from {
+	padding: 6px 20px 6px 20px;
+	padding-bottom: 6px;
+	color: #8f8f8f;
+	line-height: 18px;
+}
+
+.hide {
+	display: none;
+}

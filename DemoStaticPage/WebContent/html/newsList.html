@@ -5,28 +5,12 @@
 <meta name="description" content="龙园村CMS演示" />
 <meta name="keywords" content="龙园村CMS演示" />
 <link href="../css/common.css" rel="stylesheet" type="text/css" />
-<link href="../css/gallery.css" rel="stylesheet" type="text/css" />
-<link href="../css/sliding_styles.css" rel="stylesheet" type="text/css" />
-<link href="../css/bootstrap-icon.css" rel="stylesheet" type="text/css" />
+<link href="../css/newsList.css" rel="stylesheet" type="text/css" />
 <script language="javascript" type="text/javascript"
 	src="../js/jquery-1.9.1.js"></script>
-<script language="javascript" type="text/javascript"
-	src="../js/sliding_effect.js"></script>
-<title>图片墙 - Prototype</title>
+<title>新闻列表 - Prototype</title>
 <script>
-	$(function() {
-		$("#film").click(function() {
-			window.open("gallery.html#hashAnchor");
-			//$(this).addClass("active");
-			//$(this).siblings.removeClass("active");
-		});
-
-		$("#grid").click(function() {
-			window.open("gallery2.html#hashAnchor");
-			//$(this).addClass("active");
-			//$(this).siblings.removeClass("active");
-		});
-	});
+	
 </script>
 </head>
 <body>
@@ -36,7 +20,7 @@
 		<div class="line"></div>
 		<div class="limitWidth">
 			<div class="weather">衢州市 多云 25～9℃</div>
-			<div class="loginWrapper" >
+			<div class="loginWrapper">
 				<form>
 					<div class="loginAcct">
 						<input type="text" placeholder="帐号或邮箱"></input>
@@ -55,8 +39,7 @@
 
 			<div class="loginWrapper" style="display: none;">
 				<div class="register">
-					<span>欢迎您：admin &nbsp;&nbsp;</span>
-					<span><a href="#">退出登录</a></span>
+					<span>欢迎您：admin &nbsp;&nbsp;</span> <span><a href="#">退出登录</a></span>
 				</div>
 			</div>
 		</div>
@@ -136,7 +119,7 @@
 			</div>
 			<div class="secondary">
 				<ul>
-					<li class="secondary"><a href="wishWall.html#hashAnchor">游子情</a></li>
+					<li class="secondary"><a>游子情</a></li>
 					<li class="secondary"><a href="message.html#hashAnchor">我要帮扶</a></li>
 					<li class="secondary"><a>慈善易物</a></li>
 				</ul>
@@ -146,77 +129,69 @@
 
 	<!-- END inc_header.html -->
 
-	<!-- START gallery2.html -->
+	<!-- START newsList.html -->
 	<a name="hashAnchor"></a>
 	<div class="title">
 		<div class="position">
-			您现在正在浏览： <a>美丽龙园</a><span>&nbsp;&gt;&nbsp;</span><a>新村新貌</a>
-		</div>
-		<div class="gallery-layout-icon">
-			<span>切换布局</span>
-			<button id="film" class="btn " title="幻灯片" rel="tooltip">
-				<i class="icon-film"></i>
-			</button>
-			<button id="grid" class="btn active" title="列表" rel="tooltip">
-				<i class="icon-th"></i>
-			</button>
+			您现在正在浏览： <a>农村大学堂</a><span>&nbsp;&gt;&nbsp;</span><a>兴农科普</a>
 		</div>
 	</div>
 
-	<!-- picture scroll -->
-
-	<div id="gallery">
-		<div id="leftPanel">
-			<!-- <div class="gallery-sort-tab width120">
-				<span>规划图分类</span>
-			</div> -->
-			<ul id="sliding-navigation">
-				<li class="sliding-element"><h3>规划图分类</h3></li>
-				<li class="sliding-element"><a class="slidingSelected">分类1</a></li>
-				<li class="sliding-element"><a>分类2</a></li>
-				<li class="sliding-element"><a>分类3</a></li>
+	<!-- news list -->
+	<div class="wrapper">
+		<div class="newsList">
+			<ul>
+				<li><img src="../images/breadcrumb_separator_arrow_1_dot.png"><a><span
+						class="newsTitle">法国商人疑为奢侈品市场向中国捐赠兽首</span></a><span class="newsTime">2013-5-5</span></li>
+				<li><img src="../images/breadcrumb_separator_arrow_1_dot.png"><a><span
+						class="newsTitle">北约驻阿军队遭遇最惨重损失 9名士兵丧生</span></a><span
+					class="newsTime">2013-5-5</span></li>
+				<li><img src="../images/breadcrumb_separator_arrow_1_dot.png"><a><span
+						class="newsTitle">英国将拍卖18张英法联军入侵时北京旧照</span></a><span class="newsTime">2013-5-5</span></li>
+				<li><img src="../images/breadcrumb_separator_arrow_1_dot.png"><a><span
+						class="newsTitle">美国反恐黑名单飙升 全球87万人被列</span></a><span class="newsTime">2013-5-5</span></li>
+				<li><img src="../images/breadcrumb_separator_arrow_1_dot.png"><a><span
+						class="newsTitle">朱令铊中毒案引发白宫网站请愿 已1.6万</span></a><span
+					class="newsTime">2013-5-5</span></li>
+				<li><img src="../images/breadcrumb_separator_arrow_1_dot.png"><a><span
+						class="newsTitle">美私人公司称售出月球土地近1成</span></a><span class="newsTime">2013-5-5</span></li>
+				<li><img src="../images/breadcrumb_separator_arrow_1_dot.png"><a><span
+						class="newsTitle">尼克松外孙访华 重走祖父当年“破冰路线”</span></a><span
+					class="newsTime">2013-5-5</span></li>
+				<li><img src="../images/breadcrumb_separator_arrow_1_dot.png"><a><span
+						class="newsTitle">朝鲜开城工业园变“空城” 韩国企业损失巨</span></a><span
+					class="newsTime">2013-5-5</span></li>
+				<li><img src="../images/breadcrumb_separator_arrow_1_dot.png"><a><span
+						class="newsTitle">媒体称内贾德遭革命卫队拘禁 伊朗官方否认</span></a><span
+					class="newsTime">2013-5-5</span></li>
+				<li><img src="../images/breadcrumb_separator_arrow_1_dot.png"><a><span
+						class="newsTitle">美国官员称全球逾87万人被列入美国反恐黑</span></a><span
+					class="newsTime">2013-5-5</span></li>
 			</ul>
-		</div>
-		<div id="rightPanel">
-			<div id="sortWrapper">
-				<div class="gallery-sort-tab">
-					<span>分类1</span>
-				</div>
-				<div class="gallery-sort-list">
-					<ul>
-						<li><a href="carousel.html#hashAnchor" target="_self"><img
-								src="../images/data/20130429101553b545d.png" />
-								<h5>黄晓明拄拐现身机场</h5></a></li>
-						<li><a href="carousel.html#hashAnchor" target="_self"><img
-								src="../images/data/20130429101930c225d.png" />
-								<h5>王菲手握咖啡素颜现身</h5></a></li>
-						<li><a href="carousel.html#hashAnchor" target="_self"><img
-								src="../images/data/201304291020471914b.png" />
-								<h5>陈冠希斜戴棒球帽亮相</h5></a></li>
-						<li><a href="carousel.html#hashAnchor" target="_self"><img
-								src="../images/data/2013042810491062a3d.jpg" />
-								<h5>莫小棋出席晚会走光</h5></a></li>
-						<li><a href="carousel.html#hashAnchor" target="_self"><img
-								src="../images/data/20130428091307532b0.gif" />
-								<h5>富二代派对嫩模被掀裙</h5></a></li>
-						<li><a href="carousel.html#hashAnchor" target="_self"><img
-								src="../images/data/20130428072807b3261.gif" />
-								<h5>平安女友热舞露底裤</h5></a></li>
-						<li><a href="carousel.html#hashAnchor" target="_self"><img
-								src="../images/data/20130427185402a1b8c.jpg" />
-								<h5>旅游小姐遭网友吐槽</h5></a></li>
-					</ul>
-				</div>
 
-			</div>
 			<div class="paging">
-				<p>
-					共 7 条记录 1/1页 <a>首页</a> <a>上一页</a> <a>下一页</a> <a>尾页</a> 第 1 页
-				</p>
+				共17条记录 1/1页 <a>首页</a> <a>上一页</a> <a>下一页</a> <a>尾页</a> 第<a
+					href="#hashAnchor">1</a>页
+			</div>
+		</div>
+		<div class="rightPanel">
+			<h2>最新资讯</h2>
+			<div class="rightList">
+				<ul>
+					<li><img src="../images/bullet_blue_small.png"><a><span>鳄鱼摆上超市货架
+								每斤售价近百元</span></a></li>
+					<li><img src="../images/bullet_blue_small.png"><a><span>武汉出租车遭男子持刀抢劫
+								警方快速出击抓现行</span></a></li>
+					<li><img src="../images/bullet_blue_small.png"><a><span>广东电白摩托超员搭乘酿4亡惨祸
+								3人为学生</span></a></li>
+					<li><img src="../images/bullet_blue_small.png"><a><span>广东乐昌一男子劫持人质被警方击毙</span></a></li>
+					<li><img src="../images/bullet_blue_small.png"><a><span>河南新密村支书被曝入干股遭拒后阻挠外来投资</span></a></li>
+					<li><img src="../images/bullet_blue_small.png"><a><span>广东茂名发生交通事故 货车摩托车相撞致4死</span></a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
-	<!-- END gallery2.html -->
+	<!-- END newsList.html -->
 
 	<!-- START inc_footer.html -->
 	<div id="footerNav">

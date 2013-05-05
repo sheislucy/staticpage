@@ -1,0 +1,265 @@
+@CHARSET "UTF-8";
+
+p {
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+}
+
+span {
+	font-family: Arial;
+}
+
+.general {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+
+.askHelp {
+	height: 50px;
+}
+
+.askHelpBtn {
+	margin-top: 10px;
+	float: left;
+	width: 100px;
+	height: 30px;
+}
+
+.askHelpBtn input,.helpOverlay input,.item_b input {
+	border: 1px solid #75a960;
+	background: #cef791;
+	color: #222;
+}
+
+.askHelpBtn input {
+	width: 100px;
+	height: 30px;
+}
+
+.askHelpBtn input:hover,.helpOverlay input:hover,.item_b input:hover {
+	cursor: pointer;
+	background: #eaf7b1;
+	color: #000;
+}
+
+.askHelpBtn input:active,.helpOverlay input:active,.item_b input:active
+	{
+	cursor: pointer;
+	background: #f8fcf3;
+	color: #000;
+}
+
+.helpOverlay {
+	background-color: #fff;
+	display: none;
+	width: 400px;
+	height: 300px;
+	padding: 15px;
+	text-align: left;
+	border: 2px solid #75a960;
+	opacity: 0.8;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-box-shadow: 0 0 50px #D3ECD1;
+	-webkit-box-shadow: 0 0 50px #D3ECD1;
+	padding: 15px;
+}
+
+.helpOverlay h2 {
+	margin: 0px;
+	border-bottom: 1px solid #75a960;
+	font-size: 20px;
+}
+
+.helpOverlay textarea {
+	border: 1px solid #75a960;
+}
+
+.infinite_scroll {
+	
+}
+
+.item {
+	width: 226px;
+	background: #fff;
+	overflow: hidden;
+	margin: 15px 0 0 0;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0 1px 3px rgba(34, 25, 25, 0.2);
+}
+
+.item_t .text span,.item_b .items_comment span {
+	font-size: 12px;
+	padding: 8px 0;
+	line-height: 18px;
+}
+
+.item_t {
+	padding: 10px 8px 0;
+}
+
+.item_t .img {
+	background-color: #FFFFFF;
+	margin: 0 auto;
+	position: relative;
+	width: 210px;
+	min-height: 160px;
+}
+
+.item_t .img a {
+	display: block;
+}
+
+.item_t .img a:hover {
+	background: #000;
+}
+
+.item_t .img a:hover img {
+	filter: alpha(opacity =  
+		                                                         
+		    80);
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+	-webkit-transition: all 0.3s ease-out;
+	-khtml-transition: all 0.3s ease-out;
+}
+
+.item_t .time {
+	font-size: 12px;
+	position: absolute;
+	bottom: 10px;
+	right: 0px;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: #FFF;
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#33000000,
+		endcolorstr=#33000000 );
+}
+
+.item .text {
+	border: 1px solid #c4e5c1;
+	margin-top: 4px;
+}
+
+.item_b {
+	padding-top: 4px;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+.fullWidth input {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.items_comment {
+	margin-top: 6px;
+	margin-bottom: 6px;
+	background: #f5f6f7;
+}
+
+.items_comment p {
+	margin-bottom: 4px;
+}
+
+/* more */
+#more {
+	display: block;
+	margin: 10px auto 20px;
+}
+
+/* infscr-loading */
+#infscr-loading {
+	bottom: -10px;
+	left: 45%;
+	position: absolute;
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+	z-index: 100;
+	width: 120px;
+}
+
+/* page */
+.page {
+	display: none;
+	font-size: 18px;
+	height: 60px;
+	text-align: center;
+	margin: 20px 0 0 0;
+	background: #f8fcf3;
+}
+
+.page_num a,.page_num span {
+	margin: 0 2px;
+	background: url("../images/page.png") no-repeat;
+	display: inline-block;
+	width: 30px;
+	height: 28px;
+	line-height: 26px;
+	overflow: hidden;
+}
+
+.page_num a {
+	background-position: -65px 0;
+	color: #FF3333;
+	overflow: hidden;
+}
+
+.page_num .prev {
+	background-position: 1px -33px;
+}
+
+.page_num .unprev {
+	background-position: 1px 0;
+	cursor: default;
+}
+
+.page_num .next {
+	background-position: -32px 0;
+}
+
+.page_num .unnext {
+	background-position: -32px -33px;
+	cursor: default;
+}
+
+.page_num .current {
+	background-position: -99px 0;
+	color: #FFFFFF;
+}
+
+.page_num .etc {
+	background-position: -172px 8px;
+}
+
+/* to_top */
+.to_top a,.to_top a:hover {
+	background: url("../images/gotop.png") no-repeat
+}
+
+.to_top a {
+	background-position: 0 0;
+	float: left;
+	height: 50px;
+	overflow: hidden;
+	width: 50px;
+	position: fixed;
+	bottom: 35px;
+	cursor: pointer;
+	right: 20px;
+	_position: absolute;
+	_right: auto;
+	_left: expression(eval(document.documentElement.scrollLeft +    
+		    document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft, 10)||0
+		)-(parseInt(this.currentStyle.marginRight, 10)||20 ) );
+	_top: expression(eval(document.documentElement.scrollTop +    
+		    document.documentElement.clientHeight-this.offsetHeight- (     
+		   parseInt(this.currentStyle.marginTop, 10)||20 )-(parseInt(this.currentStyle.marginBottom, 10)||20
+		) ) );
+}
+
+.to_top a:hover {
+	background-position: -51px 0px;
+}

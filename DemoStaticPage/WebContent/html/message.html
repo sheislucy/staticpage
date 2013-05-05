@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="龙园村CMS演示" />
+<meta name="keywords" content="龙园村CMS演示" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/message.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript"
+	src="../js/jquery-1.9.1.js"></script>
+<script language="javascript" type="text/javascript"
+	src="../js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="../js/jquery.masonry.js"></script>
+<script type="text/javascript" src="../js/jquery.infinitescroll.js"></script>
+<title>我要帮扶 - Prototype</title>
+<script language="javascript" type="text/javascript">
+	function item_masonry() {
+		$('.item img').load(function() {
+			$('.infinite_scroll').masonry({
+				itemSelector : '.masonry_brick',
+				columnWidth : 226,
+				gutterWidth : 15
+			});
+		});
+
+		$('.infinite_scroll').masonry({
+			itemSelector : '.masonry_brick',
+			columnWidth : 226,
+			gutterWidth : 15
+		});
+	}
+
+	$(function() {
+		var triggers = $(".needHelpInput").overlay({
+			// some mask tweaks suitable for modal dialogs
+			mask : {
+				color : '#fff',
+				loadSpeed : 200,
+				opacity : 0.9
+			},
+
+			closeOnClick : false
+		});
+		var buttons = $(".needHelpInput").click(function(e) {
+			// do something with the answer
+			//triggers.eq(0).html("You clicked " + (yes ? "yes" : "no"));
+		});
+
+		var triggers = $(".giveHelpInput").overlay({
+			// some mask tweaks suitable for modal dialogs
+			mask : {
+				color : '#fff',
+				loadSpeed : 200,
+				opacity : 0.9
+			},
+
+			closeOnClick : false
+		});
+		var buttons = $(".giveHelpInput").click(function(e) {
+			// do something with the answer
+			//triggers.eq(0).html("You clicked " + (yes ? "yes" : "no"));
+		});
+
+		//below is the functionality of waterfall
+		function item_callback() {
+
+			$('.item').mouseover(function() {
+				$(this).css('box-shadow', '0 1px 5px rgba(35,25,25,0.5)');
+				$('.btns', this).show();
+			}).mouseout(function() {
+				$(this).css('box-shadow', '0 1px 3px rgba(34,25,25,0.2)');
+				$('.btns', this).hide();
+			});
+
+			item_masonry();
+
+		}
+
+		item_callback();
+
+		$('.item').fadeIn();
+
+		var sp = 1
+
+		$(".infinite_scroll").infinitescroll({
+			navSelector : "#more",
+			nextSelector : "#more a",
+			itemSelector : ".item",
+
+			loading : {
+				img : "../images/masonry_loading_1.gif",
+				msgText : ' ',
+				finishedMsg : '到底了哦亲，还想要问阿能要~',
+				finished : function() {
+					sp++;
+					if (sp >= 10) { //到第10页结束事件
+						$("#more").remove();
+						$("#infscr-loading").hide();
+						$("#page").show();
+						$(window).unbind('.infscr');
+					}
+				}
+			},
+			errorCallback : function() {
+				$("#page").show();
+			}
+
+		}, function(newElements) {
+			var $newElems = $(newElements);
+			$('.infinite_scroll').masonry('appended', $newElems, false);
+			$newElems.fadeIn();
+			item_callback();
+			return;
+		});
+
+		$(window).scroll(
+				function() {
+					$(window).scrollTop() > 1000 ? $("#gotopbtn").css(
+							'display', '').click(function() {
+						$(window).scrollTop(0);
+					}) : $("#gotopbtn").css('display', 'none');
+				});
+	});
+</script>
+</head>
+<body>
+
+	<!-- START inc_header.html -->
+	<div id="headerNav">
+		<div class="line"></div>
+		<div class="limitWidth">
+			<div class="weather">衢州市 多云 25～9℃</div>
+			<div class="loginWrapper">
+				<form>
+					<div class="loginAcct">
+						<input type="text" placeholder="帐号或邮箱"></input>
+					</div>
+					<div class="loginPassword">
+						<input type="password" placeholder="密码"></input>
+					</div>
+					<div class="loginBtn">
+						<input type="submit" value="登录"></input>
+					</div>
+					<div class="register">
+						<a href="#">会员注册</a>
+					</div>
+				</form>
+			</div>
+
+			<div class="loginWrapper" style="display: none;">
+				<div class="register">
+					<span>欢迎您：admin &nbsp;&nbsp;</span> <span><a href="#">退出登录</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="mainNav">
+		<div class="navWrapper">
+			<a class="logo" href="index.html"></a>
+			<div class="searchWrapper">
+				<form>
+					<div class="searchInput">
+						<input type="text" placeholder="请输入关键字"></input>
+					</div>
+					<div class="searchBtn">
+						<input type="submit" value="搜索"></input>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="menuNav">
+		<div class="line"></div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>美丽龙园</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a>走近龙园</a></li>
+					<li><a href="gallery.html">新村新貌</a></li>
+					<li><a>全景农村</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>文化龙园</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a>节事活动</a></li>
+					<li><a>光荣榜</a></li>
+					<li><a>文化遗产</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>龙园大市场</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li class="secondary"><a>赶集</a></li>
+					<li class="secondary"><a>农村旅游</a></li>
+					<li class="secondary"><a>农家乐</a></li>
+					<li class="secondary"><a>我要求职</a></li>
+					<li class="secondary"><a>企业招聘</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>龙园大学堂</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li class="secondary"><a>兴农科普</a></li>
+					<li class="secondary"><a>政策法规</a></li>
+					<li class="secondary"><a>办事指南</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block">
+			<div class="primary">
+				<span><a><b>情系龙园</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li class="secondary"><a href="wishWall.html#hashAnchor">游子情</a></li>
+					<li class="secondary"><a href="message.html#hashAnchor">我要帮扶</a></li>
+					<li class="secondary"><a>慈善易物</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- END inc_header.html -->
+
+	<!-- START message.html -->
+	<a name="hashAnchor"></a>
+	<div class="title">
+		<div class="position">
+			您现在正在浏览： <a>情系农村</a><span>&nbsp;&gt;&nbsp;</span><a>我要帮扶</a>
+		</div>
+	</div>
+
+	<!-- ask for help -->
+	<div class="general askHelp">
+		<div class="askHelpBtn">
+			<input class="needHelpInput" type="button" value="我要求助"
+				rel="#iNeedHelp"></input>
+		</div>
+	</div>
+	<div class="helpOverlay" id="iNeedHelp">
+		<h2>我要求助</h2>
+
+		<br />
+
+		<!-- input form. you can press enter too -->
+		<form>
+			<textarea rows="15" cols="53"></textarea>
+			<input type="submit" value="确定"></input> <input type="button"
+				class="close" value="取消"></input>
+		</form>
+		<br />
+
+	</div>
+	<!-- SOS waterfall -->
+
+	<div class="general">
+
+		<div class=" infinite_scroll">
+
+			<div class="item masonry_brick">
+				<div class="item_t">
+					<div class="img">
+						<a href="#"><img width="210" height="285" alt="#"
+							src="../images/data/m01.jpg" /></a> <span class="time">2013-4-1</span>
+					</div>
+					<div class="text">
+						<span><b>阿能的大妹子丢了，谁见到了?</b></span>
+					</div>
+				</div>
+				<div class="item_b">
+					<div class="fullWidth">
+						<input class="giveHelpInput" type="button" value="我来帮"
+							rel="#iGiveHelp"></input>
+					</div>
+					<div class="items_comment">
+						<p>
+							<span>所长别开枪是我：在我家。(2013-5-4)</span>
+						</p>
+						<p>
+							<span>林无知：在我家。(2013-5-2)</span>
+						</p>
+						<p>
+							<span>叫兽：在我家。(2013-5-1)</span>
+						</p>
+						<p>
+							<span>还有<a href="#">3</a>条评论
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--item end-->
+
+			<div class="item masonry_brick">
+				<div class="item_t">
+					<div class="img">
+						<a href="#"><img width="210" height="164" alt="#"
+							src="../images/data/m02.jpg" /></a> <span class="time">2013-4-1</span>
+					</div>
+					<div class="text">
+						<span><b>阿能的大妹子丢了，谁见到了?</b></span>
+					</div>
+				</div>
+				<div class="item_b">
+					<div class="fullWidth">
+						<input class="giveHelpInput" type="button" value="我来帮"
+							rel="#iGiveHelp"></input>
+					</div>
+					<div class="items_comment">
+						<p>
+							<span>所长别开枪是我：在我家。(2013-5-4)</span>
+						</p>
+						<p>
+							<span>林无知：在我家。(2013-5-2)</span>
+						</p>
+						<p>
+							<span>叫兽：在我家。(2013-5-1)</span>
+						</p>
+						<p>
+							<span>还有<a href="#">3</a>条评论
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--item end-->
+
+			<div class="item masonry_brick">
+				<div class="item_t">
+					<div class="img">
+						<a href="#"><img width="210" height="287" alt="#"
+							src="../images/data/m03.jpg" /></a> <span class="time">2013-4-1</span>
+					</div>
+					<div class="text">
+						<span><b>阿能的大妹子丢了，谁见到了?</b></span>
+					</div>
+				</div>
+				<div class="item_b">
+					<div class="fullWidth">
+						<input class="giveHelpInput" type="button" value="我来帮"
+							rel="#iGiveHelp"></input>
+					</div>
+					<div class="items_comment">
+						<p>
+							<span>所长别开枪是我：在我家。(2013-5-4)</span>
+						</p>
+						<p>
+							<span>林无知：在我家。(2013-5-2)</span>
+						</p>
+						<p>
+							<span>叫兽：在我家。(2013-5-1)</span>
+						</p>
+						<p>
+							<span>还有<a href="#">3</a>条评论
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--item end-->
+
+			<div class="item masonry_brick">
+				<div class="item_t">
+					<div class="img">
+						<a href="#"><img width="210" height="285" alt="#"
+							src="../images/data/m04.jpg" /></a> <span class="time">2013-4-1</span>
+					</div>
+					<div class="text">
+						<span><b>阿能的大妹子丢了，谁见到了?</b></span>
+					</div>
+				</div>
+				<div class="item_b">
+					<div class="fullWidth">
+						<input class="giveHelpInput" type="button" value="我来帮"
+							rel="#iGiveHelp"></input>
+					</div>
+					<div class="items_comment">
+						<p>
+							<span>所长别开枪是我：在我家。(2013-5-4)</span>
+						</p>
+						<p>
+							<span>林无知：在我家。(2013-5-2)</span>
+						</p>
+						<p>
+							<span>叫兽：在我家。(2013-5-1)</span>
+						</p>
+						<p>
+							<span>还有<a href="#">3</a>条评论
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--item end-->
+
+			<div class="item masonry_brick">
+				<div class="item_t">
+					<div class="img">
+						<a href="#"><img width="210" height="323" alt="#"
+							src="../images/data/m05.jpg" /></a> <span class="time">2013-4-1</span>
+					</div>
+					<div class="text">
+						<span><b>阿能的大妹子丢了，谁见到了?</b></span>
+					</div>
+				</div>
+				<div class="item_b">
+					<div class="fullWidth">
+						<input class="giveHelpInput" type="button" value="我来帮"
+							rel="#iGiveHelp"></input>
+					</div>
+					<div class="items_comment">
+						<p>
+							<span>所长别开枪是我：在我家。(2013-5-4)</span>
+						</p>
+						<p>
+							<span>林无知：在我家。(2013-5-2)</span>
+						</p>
+						<p>
+							<span>叫兽：在我家。(2013-5-1)</span>
+						</p>
+						<p>
+							<span>还有<a href="#">3</a>条评论
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--item end-->
+
+			<div class="item masonry_brick">
+				<div class="item_t">
+					<div class="img">
+						<a href="#"><img width="210" height="254" alt="#"
+							src="../images/data/m09.jpg" /></a> <span class="time">2013-4-1</span>
+					</div>
+					<div class="text">
+						<span><b>阿能的大妹子丢了，谁见到了?</b></span>
+					</div>
+				</div>
+				<div class="item_b">
+					<div class="fullWidth">
+						<input class="giveHelpInput" type="button" value="我来帮"
+							rel="#iGiveHelp"></input>
+					</div>
+					<div class="items_comment">
+						<p>
+							<span>所长别开枪是我：在我家。(2013-5-4)</span>
+						</p>
+						<p>
+							<span>林无知：在我家。(2013-5-2)</span>
+						</p>
+						<p>
+							<span>叫兽：在我家。(2013-5-1)</span>
+						</p>
+						<p>
+							<span>还有<a href="#">3</a>条评论
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--item end-->
+
+			<div class="item masonry_brick">
+				<div class="item_t">
+					<div class="img">
+						<a href="#"><img width="210" height="276" alt="#"
+							src="../images/data/m10.jpg" /></a> <span class="time">2013-4-1</span>
+					</div>
+					<div class="text">
+						<span><b>阿能的大妹子丢了，谁见到了?</b></span>
+					</div>
+				</div>
+				<div class="item_b">
+					<div class="fullWidth">
+						<input class="giveHelpInput" type="button" value="我来帮"
+							rel="#iGiveHelp"></input>
+					</div>
+					<div class="items_comment">
+						<p>
+							<span>所长别开枪是我：在我家。(2013-5-4)</span>
+						</p>
+						<p>
+							<span>林无知：在我家。(2013-5-2)</span>
+						</p>
+						<p>
+							<span>叫兽：在我家。(2013-5-1)</span>
+						</p>
+						<p>
+							<span>还有<a href="#">3</a>条评论
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--item end-->
+		</div>
+
+		<div id="more">
+			<a href="#"></a>
+		</div>
+
+		<!-- <div id="page" class="page" style="display: none;">
+			<div class="page_num">
+				<span class="unprev"></span> <span class="current">1</span> <a
+					href="#">&nbsp;2&nbsp;</a> <a href="#">&nbsp;3&nbsp;</a> <a
+					href="#">&nbsp;4&nbsp;</a> <a href="#">&nbsp;5&nbsp;</a> <span
+					class="etc"></span> <a href="#">12</a> <a href="#" class="next"></a>
+			</div>
+		</div> -->
+	</div>
+
+	<div style="display: none;" id="gotopbtn" class="to_top">
+		<a title="返回顶部" href="javascript:void(0);"></a>
+	</div>
+
+	<div class="helpOverlay" id="iGiveHelp">
+		<h2>我来帮忙</h2>
+
+		<br />
+
+		<!-- input form. you can press enter too -->
+		<form>
+			<textarea rows="15" cols="53"></textarea>
+			<input type="submit" value="确定"></input> <input type="button"
+				class="close" value="取消"></input>
+		</form>
+		<br />
+
+	</div>
+
+	<!-- END message.html -->
+
+	<!-- START inc_footer.html -->
+	<div id="footerNav">
+		<div id="footerMenu">
+			<ul>
+				<li><a>关于我们 </a>┊</li>
+				<li><a>网站地图 </a>┊</li>
+				<li><a>联系我们 </a>┊</li>
+				<li><a>广告服务 </a></li>
+			</ul>
+		</div>
+		<p>Copyright 2013, All Rights Reserved</p>
+	</div>
+	<!-- END inc_footer.html -->
+</body>
+</html>

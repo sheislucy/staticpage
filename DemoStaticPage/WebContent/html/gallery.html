@@ -15,17 +15,19 @@
 
 <script type="text/javascript">
 	$(function() {
+		//window.location.href("#hashAnchor");
+		
 		galleryScroll();
 
 		//---------------切换布局--
 		$("#film").click(function() {
-			window.open("gallery.html");
+			window.open("gallery.html#hashAnchor");
 			//$(this).addClass("active");
 			//$(this).siblings.removeClass("active");
 		});
 
 		$("#grid").click(function() {
-			window.open("gallery2.html");
+			window.open("gallery2.html#hashAnchor");
 			//$(this).addClass("active");
 			//$(this).siblings.removeClass("active");
 		});
@@ -51,7 +53,16 @@
 					<div class="loginBtn">
 						<input type="submit" value="登录"></input>
 					</div>
+					<div class="register">
+						<a href="#">会员注册</a>
+					</div>
 				</form>
+			</div>
+
+			<div class="loginWrapper" style="display: none;">
+				<div class="register">
+					<span>欢迎您：admin &nbsp;&nbsp;</span> <span><a href="#">退出登录</a></span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -130,8 +141,8 @@
 			</div>
 			<div class="secondary">
 				<ul>
-					<li class="secondary"><a>游子情</a></li>
-					<li class="secondary"><a>我要帮扶</a></li>
+					<li class="secondary"><a href="wishWall.html#hashAnchor">游子情</a></li>
+					<li class="secondary"><a href="message.html#hashAnchor">我要帮扶</a></li>
 					<li class="secondary"><a>慈善易物</a></li>
 				</ul>
 			</div>
@@ -141,6 +152,7 @@
 	<!-- END inc_header.html -->
 
 	<!-- START gallery.html -->
+	<a name="hashAnchor"></a>
 	<div class="title">
 		<div class="position">
 			您现在正在浏览： <a>美丽龙园</a><span>&nbsp;&gt;&nbsp;</span><a>新村新貌</a>
@@ -154,75 +166,75 @@
 			</button>
 		</div>
 	</div>
-
+	
 	<!-- picture scroll -->
 	<div id="focus">
 		<ul>
 			<li>
 				<div style="left: 0; top: 0;">
-					<a href=""><img width="1000" height="600"
-						src="../images/5364.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="1000"
+						height="600" src="../images/data/5364.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 
 			</li>
 			<li>
 				<div style="left: 0; top: 0;">
-					<a href=""><img width="700" height="600"
-						src="../images/5152.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="700"
+						height="600" src="../images/data/5152.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 				<div style="right: 0; top: 0;">
-					<a href=""><img width="300" height="200"
-						src="../images/234rwe.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="300"
+						height="200" src="../images/data/234rwe.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 				<div style="right: 0; top: 200px;">
-					<a href=""><img width="300" height="200"
-						src="../images/54325.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="300"
+						height="200" src="../images/data/54325.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 				<div style="right: 0; bottom: 0;">
-					<a href=""><img width="300" height="200"
-						src="../images/as124.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="300"
+						height="200" src="../images/data/as124.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 			</li>
 			<li>
 				<div style="left: 0; top: 0;">
-					<a href=""><img width="300" height="200"
-						src="../images/12as.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="300"
+						height="200" src="../images/data/12as.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 				<div style="left: 300px; top: 0;">
-					<a href=""><img width="300" height="200"
-						src="../images/12wf.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="300"
+						height="200" src="../images/data/12wf.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 				<div style="left: 0; top: 200px;">
-					<a href=""><img width="600" height="400"
-						src="../images/adf13.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="600"
+						height="400" src="../images/data/adf13.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 				<div style="right: 0; top: 0;">
-					<a href=""><img width="400" height="600"
-						src="../images/1235.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="400"
+						height="600" src="../images/data/1235.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 			</li>
 			<li>
 				<div style="left: 0; top: 0;">
-					<a href=""><img width="700" height="600"
-						src="../images/5243.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="700"
+						height="600" src="../images/data/5243.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 				<div style="right: 0; top: 0;">
-					<a href=""><img width="300" height="200"
-						src="../images/3246.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="300"
+						height="200" src="../images/data/3246.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 				<div style="right: 0; top: 200px;">
-					<a href=""><img width="300" height="200"
-						src="../images/536.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor"><img width="300" height="200"
+						src="../images/data/536.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 				<div style="right: 0; bottom: 0;">
-					<a href=""><img width="300" height="200"
-						src="../images/56dsfa.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="300"
+						height="200" src="../images/data/56dsfa.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 			</li>
 			<li>
 				<div style="left: 0; top: 0;">
-					<a href=""><img width="1000" height="600"
-						src="../images/52525.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
+					<a href="carousel.html#hashAnchor" target="_self"><img width="1000"
+						height="600" src="../images/data/52525.jpg" alt="2012淘宝商城最新多格焦点图源代码" /></a>
 				</div>
 			</li>
 		</ul>

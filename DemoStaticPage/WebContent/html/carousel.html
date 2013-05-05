@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="龙园村CMS演示" />
+<meta name="keywords" content="龙园村CMS演示" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/carousel.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript"
+	src="../js/jquery-1.9.1.js"></script>
+<script language="javascript" type="text/javascript"
+	src="../js/BX.1.0.1.U.js"></script>
+<title>图片幻灯 - Prototype</title>
+
+</head>
+<body>
+
+	<!-- START inc_header.html -->
+	<div id="headerNav">
+		<div class="line"></div>
+		<div class="limitWidth">
+			<div class="weather">衢州市 多云 25～9℃</div>
+			<div class="loginWrapper">
+				<form>
+					<div class="loginAcct">
+						<input type="text" placeholder="帐号或邮箱"></input>
+					</div>
+					<div class="loginPassword">
+						<input type="password" placeholder="密码"></input>
+					</div>
+					<div class="loginBtn">
+						<input type="submit" value="登录"></input>
+					</div>
+					<div class="register">
+						<a href="#">会员注册</a>
+					</div>
+				</form>
+			</div>
+
+			<div class="loginWrapper" style="display: none;">
+				<div class="register">
+					<span>欢迎您：admin &nbsp;&nbsp;</span> <span><a href="#">退出登录</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="mainNav">
+		<div class="navWrapper">
+			<a class="logo" href="index.html"></a>
+			<div class="searchWrapper">
+				<form>
+					<div class="searchInput">
+						<input type="text" placeholder="请输入关键字"></input>
+					</div>
+					<div class="searchBtn">
+						<input type="submit" value="搜索"></input>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="menuNav">
+		<div class="line"></div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>美丽龙园</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a>走近龙园</a></li>
+					<li><a href="gallery.html">新村新貌</a></li>
+					<li><a>全景农村</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>文化龙园</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a>节事活动</a></li>
+					<li><a>光荣榜</a></li>
+					<li><a>文化遗产</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>龙园大市场</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li class="secondary"><a>赶集</a></li>
+					<li class="secondary"><a>农村旅游</a></li>
+					<li class="secondary"><a>农家乐</a></li>
+					<li class="secondary"><a>我要求职</a></li>
+					<li class="secondary"><a>企业招聘</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>龙园大学堂</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li class="secondary"><a>兴农科普</a></li>
+					<li class="secondary"><a>政策法规</a></li>
+					<li class="secondary"><a>办事指南</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block">
+			<div class="primary">
+				<span><a><b>情系龙园</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li class="secondary"><a href="wishWall.html#hashAnchor">游子情</a></li>
+					<li class="secondary"><a href="message.html#hashAnchor">我要帮扶</a></li>
+					<li class="secondary"><a>慈善易物</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- END inc_header.html -->
+
+	<!-- START carousel.html -->
+	<a name="hashAnchor"></a>
+	<div class="title">
+		<div class="position">
+			您现在正在浏览： <a>美丽龙园</a><span>&nbsp;&gt;&nbsp;</span><a>新村新貌</a> <span>&nbsp;&gt;&nbsp;</span><a>规划1</a><span>&nbsp;&gt;&nbsp;正文</span>
+		</div>
+	</div>
+
+	<!-- picture carousel -->
+
+	<div class="photoMHD">
+
+		<div class="carouselTitle">
+			<div class="txt">
+				<h1>
+					内地嫩模代言网游走红 成韩国杂志封面女郎 <span class="num">(<em id="photoIndex"></em>/15)
+					</span><span class="time">2012-06-30 13:18</span>
+				</h1>
+			</div>
+			<div class="function">
+				<a class="ckap" title="查看全部图片" id="showallPic"></a> <a class="ckbp"
+					id="btnOrig" title="查看大图" target="_blank"></a> <a class="return"
+					title="返回幻灯" style="display: none"></a>
+			</div>
+		</div>
+		<!--title end-->
+
+		<div class="photoNews" id="imgBox">
+
+			<div id="picDiv" style="display: block;">
+				<div class="pic" id="photoView">
+					<img id="photoPrevLoading"
+						src="http://www.jsfoot.com/js/demo/2012-07-18/images/rdn_4fe5f4f8ee668.jpg"
+						width="609" height="800" style="display: none" />
+					<div class="photo_prev">
+						<a id="photoPrev" class="btn_pphoto" target="_self"
+							hidefocus="true" title="上一张，支持 '← '翻页"></a>
+					</div>
+					<div class="photo_next">
+						<a id="photoNext" class="btn_nphoto" target="_self"
+							hidefocus="true" title="下一张，支持 '→ '翻页"></a>
+					</div>
+					<a id="photoimg"><img id="photo"
+						style="filter: alpha(opacity =           100);"
+						src="http://www.jsfoot.com/js/demo/2012-07-18/images/rdn_4fe5f4f8ee668.jpg"
+						width="609" height="800" /></a>
+				</div>
+			</div>
+
+			<div class="allPic" id="moretab" style="display: none">
+				<div class="leftArae">
+					<a id="moreLeft"></a>
+				</div>
+				<div class="smallpic_box clearfix">
+					<div
+						style="height: 560px; overflow: hidden; position: relative; width: 935px;">
+						<div id="imageListView" class="smallpic_con clearfix"></div>
+					</div>
+				</div>
+				<div class="rightArae">
+					<a id="moreRight"></a>
+				</div>
+				<div class="clear"></div>
+				<div class="btn" id="btnPage"></div>
+			</div>
+
+			<div class="zy clearfix">
+				<div class="wrap_text">
+					<p class="text_con" id="photoDesc">据悉，韩国出品的成人网游《女王之刃》代言人，内地超模艾尚真被选为韩国娱乐杂志《MAXIM（箴言）》的7月刊封面女郎。为了参与《女王之刃》的宣传活动于今年五月访韩的艾尚真，在参与游戏宣传活动之余还参与了《MAXIM》杂志的照片拍摄。</p>
+					<p class="keywords">
+						关键词：<a href="#" target="_blank">艾尚真</a> <a href="#"
+							target="_blank">女王之刃</a> <a href="#" target="_blank">MAXIM杂志</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="photoList" id="picList_b">
+				<div class="before">
+					<a id="prevSet"
+						href="http://games.ifeng.com/picture/gaoqing/detail_2012_06/19/15417602_0.shtml"
+						target="_blank"><img
+						src="http://www.jsfoot.com/js/demo/2012-07-18/images/xes_a8c044c953814602afc9c9cfc98db8c8.jpg"
+						width="104" height="69" /></a>
+					<p>
+						<a
+							href="http://games.ifeng.com/picture/gaoqing/detail_2012_06/19/15417602_0.shtml"
+							target="_blank">&lt;&lt;&nbsp;上一图集</a>
+					</p>
+				</div>
+
+				<div class="picList" id="scrl">
+					<div id="scrlPrev" class="l1">
+						<a id="scrlPrev_b"></a>
+					</div>
+
+					<div class="l2">
+						<div class="listM" style="position: relative">
+							<ul id="thumb" style="position: absolute">
+								<li><a href="#p=1" hidefocus="true"><img
+										src="http://www.jsfoot.com/js/demo/2012-07-18/images/xes_04115e473f58bf599cbc52794a4c0e3d.jpg" /></a></li>
+								<li><a href="#p=2" hidefocus="true"><img
+										src="http://www.jsfoot.com/js/demo/2012-07-18/images/xes_c78dc213a6c7bdaf3fd601fd4c24a131.jpg" /></a></li>
+								<li><a href="#p=3" hidefocus="true"><img
+										src="http://www.jsfoot.com/js/demo/2012-07-18/images/xes_c0a7c52195eba83b8b2ee81abd5c4ce0.jpg" /></a></li>
+								<li><a href="#p=4" hidefocus="true"><img
+										src="http://www.jsfoot.com/js/demo/2012-07-18/images/xes_228bfeb5af191a13aedf5ad1abfb9804.jpg" /></a></li>
+								<li><a href="#p=5" hidefocus="true"><img
+										src="http://www.jsfoot.com/js/demo/2012-07-18/images/xes_01a639c9981430cf0b79251ad6674445.jpg" /></a></li>
+							</ul>
+						</div>
+						<div class="scrollBar">
+							<a class="drag" id="bar"><b class="l_arrow"></b><b
+								class="r_arrow"></b></a>
+						</div>
+					</div>
+
+					<div id="scrlNext" class="l3">
+						<a id="scrlNext_b"></a>
+					</div>
+				</div>
+
+				<div class="after">
+					<a id="nextSet"
+						href="http://games.ifeng.com/picture/gaoqing/detail_2012_06/30/15671210_0.shtml"
+						target="_blank"><img
+						src="http://www.jsfoot.com/js/demo/2012-07-18/images/xes_e8099596d70821d210b4251bded5681c.jpg"
+						width="104" height="69" /></a>
+					<p>
+						<a
+							href="http://games.ifeng.com/picture/gaoqing/detail_2012_06/30/15671210_0.shtml"
+							target="_blank">下一图集&nbsp;&gt;&gt;</a>
+					</p>
+				</div>
+
+				<div class="clear"></div>
+
+			</div>
+
+		</div>
+		<!--photoNews end-->
+
+		<div class="clear"></div>
+
+	</div>
+
+
+	<script language="javascript" type="text/javascript"
+		src="../js/carousel.js"></script>
+	<script language="javascript" type="text/javascript"
+		src="../js/carousel-mock-data.js"></script>
+
+	<!-- END carousel.html -->
+
+	<!-- START inc_footer.html -->
+	<div id="footerNav">
+		<div id="footerMenu">
+			<ul>
+				<li><a>关于我们 </a>┊</li>
+				<li><a>网站地图 </a>┊</li>
+				<li><a>联系我们 </a>┊</li>
+				<li><a>广告服务 </a></li>
+			</ul>
+		</div>
+		<p>Copyright 2013, All Rights Reserved</p>
+	</div>
+	<!-- END inc_footer.html -->
+</body>
+</html>
