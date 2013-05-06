@@ -15,7 +15,7 @@
 <title>首页 - Prototype</title>
 
 <script language="javascript" type="text/javascript">
-	$(function() {
+	$(document).ready(function() {
 		initiateIndex();
 		getWeather();
 	});
@@ -27,8 +27,11 @@
 	<div id="headerNav">
 		<div class="line"></div>
 		<div class="limitWidth">
+			<iframe id="weatherFrame"
+				src="http://www.weather.com.cn/data/cityinfo/101211001.html"
+				width="0" height="0" frameborder="0" /></iframe>
 			<div class="weather">衢州市 多云 25～9℃</div>
-			<div class="loginWrapper" >
+			<div class="loginWrapper">
 				<form>
 					<div class="loginAcct">
 						<input type="text" placeholder="帐号或邮箱"></input>
@@ -47,8 +50,7 @@
 
 			<div class="loginWrapper" style="display: none;">
 				<div class="register">
-					<span>欢迎您：admin &nbsp;&nbsp;</span>
-					<span><a href="#">退出登录</a></span>
+					<span>欢迎您：admin &nbsp;&nbsp;</span> <span><a href="#">退出登录</a></span>
 				</div>
 			</div>
 		</div>
@@ -234,10 +236,12 @@
 				</div>
 				<div class="commonList shadow">
 					<ul>
-						<li><a><img src="../images/data/video_1.png" alt="李宁落泪送别李经纬" />
-								<i class="videoIcon"></i><span class="videlSpan">李宁落泪送别李经纬</span></a></li>
-						<li><a><img src="../images/data/video_2.jpg" alt="买黄金ETF比金条省钱" />
-								<i class="videoIcon"></i><span class="videlSpan">买黄金ETF比金条省钱</span></a></li>
+						<li><a><img src="../images/data/video_1.png"
+								alt="李宁落泪送别李经纬" /> <i class="videoIcon"></i><span
+								class="videlSpan">李宁落泪送别李经纬</span></a></li>
+						<li><a><img src="../images/data/video_2.jpg"
+								alt="买黄金ETF比金条省钱" /> <i class="videoIcon"></i><span
+								class="videlSpan">买黄金ETF比金条省钱</span></a></li>
 					</ul>
 				</div>
 			</div>
