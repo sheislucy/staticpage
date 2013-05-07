@@ -1,0 +1,137 @@
+@CHARSET "UTF-8";
+
+.newsDetail h1 {
+	text-align: center;
+}
+
+.newsDetail a {
+	text-decoration: none;
+}
+
+.newsDetail a:hover {
+	color: #ec6801;
+	text-decoration: underline;
+}
+
+.newsDetail .properties {
+	text-align: center;
+	font-size: 12px;
+	color: #999;
+	height: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+.newsDetail .summary {
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	font-size: 13px;
+	width: 80%;
+	background: #ccc;
+}
+
+.newsDetail .content {
+	margin-top: 20px;
+}
+
+.newsDetail .content .pic-wrapper {
+	text-align: center;
+}
+
+.newsDetail .content .pic-wrapper p {
+	font-size: 12px;
+	color: #555;
+}
+
+.newsDetail .content .text-wrapper {
+	text-align: justify;
+	text-indent: 2em;
+}
+
+.newsDetail .tags {
+	font-size: 12px;
+}
+
+.newsDetail .tags span {
+	color: #555;
+}
+
+.newsDetail .siblings {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 13px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.newsDetail .comment .commentList {
+	font-size: 13px;
+}
+
+.newsDetail .comment .commentList dl dt {
+	margin: 5px 0 5px;
+}
+
+.newsDetail .comment .commentList dl dd {
+	margin: 0;
+	padding: 0;
+}
+
+.commentLine {
+	border-bottom: 1px dashed #ccc;
+}
+
+.newsDetail .comment .commentList span {
+	color: #555;
+}
+
+.newsDetail .comment .commentInput {
+	border: 1px solid #D3ECD1;
+	margin-top: 5px;
+}
+
+.newsDetail .comment .commentInput textarea {
+	width: 99%;
+	height: 105px;
+	border-width: 0;
+	font-size: 14px;
+	clear: both;
+	text-align: left;
+	color: #555;
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	resize: none;
+	outline: 0;
+	-webkit-appearance: none;
+	padding: 5px;
+}
+
+.newsDetail .comment .commentInput:hover {
+	border: 1px solid #aad2ff;
+}
+
+.newsDetail .comment input {
+	margin-top: 5px;
+	outline-style: none;
+	-webkit-appearance: none;
+	width: 50px;
+	border: 1px solid #75a960;
+	background: #cef791;
+	height: 20px;
+	color: #555555;
+	behavior: url(../css/PIE.htc);
+}
+
+.newsDetail .comment input:hover {
+	cursor: pointer;
+	background: #eaf7b1;
+	color: #000;
+}
+
+.newsDetail .comment input:active {
+	cursor: pointer;
+	background: #f8fcf3;
+	color: #000;
+}

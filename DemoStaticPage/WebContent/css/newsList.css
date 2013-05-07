@@ -13,6 +13,15 @@ h2 {
 	float: left;
 }
 
+.newsList a,.rightPanel a {
+	text-decoration: none;
+}
+
+.newsList a:hover,.rightPanel a:hover {
+	color: #ec6801;
+	text-decoration: underline;
+}
+
 .newsList ul li {
 	font-size: 13px;
 	line-height: 30px;
