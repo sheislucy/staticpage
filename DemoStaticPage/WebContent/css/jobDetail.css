@@ -1,0 +1,270 @@
+@CHARSET "UTF-8";
+
+p {
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+
+em {
+	font-style: normal;
+}
+
+dl {
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+
+dd {
+	-webkit-margin-start: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #75a960;
+}
+
+a:hover {
+	color: #ec6801;
+	cursor: pointer;
+}
+
+.fl {
+	float: left;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.job-subject {
+	width: 100%;
+	height: 80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	border-top: 2px solid #7aaf23;
+	background: #f5f5f5;
+}
+
+.job-subject .job-name {
+	margin-left: 20px;
+	line-height: 50px;
+	font-size: 24px;
+	font-family: 'Microsoft Yahei', 'SimSun';
+	color: #4b4b4b;
+}
+
+.job-subject .job-attribute {
+	margin-left: 20px;
+	line-height: 30px;
+	font-size: 13px;
+	color: #444;
+}
+
+.job-content {
+	margin: 10px;
+	font-size: 14px;
+}
+
+.mr14 {
+	margin-right: 14px;
+}
+
+.job-content .company-attribute {
+	height: 20px;
+}
+
+.job-content .company-attribute i.license {
+	background: url(../images/job-list.png) no-repeat 0 -238px;
+	width: 20px;
+	height: 18px;
+}
+
+.job-content .company-attribute i.integrity {
+	background: url(../images/bg_img_detail.png) no-repeat 0 -364px;
+	width: 108px;
+	height: 23px;
+}
+
+.job-content .job-detail,.job-content .welfare {
+	margin-top: 20px;
+}
+
+.job-content .job-detail ul li {
+	width: 50%;
+	height: 30px;
+}
+
+.job-content .job-detail ul li span {
+	color: #707070;
+}
+
+.welfare-part-b {
+	margin-top: 10px;
+	background: #f7f7f7;
+	border: 1px solid #ddd;
+	height: 170px;
+}
+
+.welfare-part-b dt,.welfare-part-b dd {
+	float: left;
+	margin-right: 20px;
+}
+
+.welfare-part-b dd {
+	padding-top: 7px;
+}
+
+.basic-welfare,.other-welfare {
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 60px;
+}
+
+.icon-insure {
+	background: url(../images/job-detail.png) no-repeat 15px -84px;
+	width: 40px;
+	height: 21px;
+	display: block;
+}
+
+.icon-car {
+	background: url(../images/job-detail.png) no-repeat 15px -130px;;
+	width: 40px;
+	height: 21px;
+	display: block;
+}
+
+.ico-equip-has {
+	background: url(../images/ico_has.png) no-repeat;
+	display: inline-block;
+	float: left;
+	height: 20px;
+	margin-right: 5px;
+	width: 14px;
+}
+
+.welfare-part-c {
+	margin-top: 10px;
+}
+
+.welfare-part-c .welfareTab {
+	background: #f7f7f7;
+	border-bottom: 1px solid #ddd;
+	height: 30px;
+}
+
+.welfare-part-c .welfareTab span {
+	width: 100px;
+	float: left;
+	line-height: 30px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.welfare-part-c .welfareTab span:hover {
+	color: #ec6801;
+	cursor: pointer;
+}
+
+.select {
+	background: #fff;
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.hide {
+	display: none;
+}
+
+.welfareBox {
+	margin-left: 10px;
+	margin-top: 10px;
+	line-height: 25px;
+}
+
+.evaluate-part-a dt,.evaluate-part-a dd,.evaluate-part-b dt {
+	width: 100px;
+}
+
+.evaluate-part-a em,.evaluate-part-b em {
+	color: #ec6801;
+}
+
+.d-user-eva-hand0 {
+	background: url(../images/bg_img_detail.png) no-repeat -126px -352px;
+	width: 16px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: -4px;
+}
+
+.d-user-eva-hand1 {
+	background: url(../images/bg_img_detail.png) no-repeat -126px -394px;
+	width: 16px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: -4px;
+}
+
+.d-user-eva-hand2 {
+	background: url(../images/bg_img_detail.png) no-repeat -126px -435px;
+	width: 16px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: -4px;
+}
+
+.evaluate-part-b textarea {
+	border: 1px solid #ddd;
+	width: 440px;
+	height: 220px;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.record-table td {
+	border: 1px solid #f0f0f0;
+	line-height: 25px;
+	padding-left: 15px;
+	color: #4b4b4b;
+	width: 200px;
+}
+
+.data-tr-bg td {
+	background-color: #fafafa;
+}
+
+.job-apply {
+	margin-top: 10px;
+}
+
+.job-apply input {
+	width: 120px;
+	border: 1px solid #75a960;
+	background: #cef791;
+	height: 40px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	color: #555555;
+	behavior: url(../css/PIE.htc);
+}
+
+.job-apply input:hover {
+	cursor: pointer;
+	background: #eaf7b1;
+	color: #000;
+}
+
+.job-apply input:active {
+	cursor: pointer;
+	background: #f8fcf3;
+	color: #000;
+}

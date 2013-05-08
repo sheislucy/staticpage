@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+
+@CHARSET "UTF-8";
+
+dd {
+	-webkit-margin-start: 0;
+}
+
+dl {
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ec6801;
+	cursor: pointer;
+}
+
+.jobList .title {
+	width: 100%;
+	border: 1px solid #c4e5c1;
+	font-size: 13px;
+	height: 30px;
+}
+
+.fl {
+	float: left;
+}
+
+.added-time {
+	width: 10%;
+}
+
+.goods-name {
+	width: 80%;
+}
+
+.goods-price {
+	width: 10%;
+}
+
+.goods-repeat dl {
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	border-bottom: 1px dashed #ccc;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0;
+	font-size: 13px;
+	color: #707070;
+}
+
+.goods-repeat dl a {
+	font-size: 14px;
+}
+
+.goods-repeat dl .sell-by {
+	color: #ec6801;
+}
+
+.paging {
+	margin-top: 10px;
+	text-align: center;
+	font-size: 13px;
+}

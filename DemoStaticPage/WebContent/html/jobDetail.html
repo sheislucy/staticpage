@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="龙园村CMS演示" />
+<meta name="keywords" content="龙园村CMS演示" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/jobDetail.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript"
+	src="../js/jquery-1.9.1.js"></script>
+<title>企业招聘详情 - Prototype</title>
+<script>
+	$(function() {
+		$(".welfareTab > span").each(function() {
+			$(this).click(function() {
+				$(this).addClass("select");
+				$(this).siblings().removeClass("select");
+				var name = "div#" + $(this).attr("id") + "-div";
+				$(name).removeClass("hide");
+				$(name).siblings(".welfareBox").addClass("hide");
+			});
+		});
+	});
+</script>
+
+</head>
+<body>
+
+	<!-- START inc_header.html -->
+	<div id="headerNav">
+		<div class="line"></div>
+		<div class="limitWidth">
+			<div class="weather">衢州市 多云 25～9℃</div>
+			<div class="loginWrapper">
+				<form>
+					<div class="loginAcct">
+						<input type="text" placeholder="帐号或邮箱"></input>
+					</div>
+					<div class="loginPassword">
+						<input type="password" placeholder="密码"></input>
+					</div>
+					<div class="loginBtn">
+						<input type="submit" value="登录"></input>
+					</div>
+					<div class="register">
+						<a href="#">会员注册</a>
+					</div>
+				</form>
+			</div>
+
+			<div class="loginWrapper" style="display: none;">
+				<div class="register">
+					<span>欢迎您：admin &nbsp;&nbsp;</span> <span><a href="#">退出登录</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="mainNav">
+		<div class="navWrapper">
+			<a class="logo" href="index.html"></a>
+			<div class="searchWrapper">
+				<form>
+					<div class="searchInput">
+						<input type="text" placeholder="请输入关键字"></input>
+					</div>
+					<div class="searchBtn">
+						<input type="submit" value="搜索"></input>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="menuNav">
+		<div class="line"></div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>美丽龙园</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a href="newsList.html">走近龙园</a></li>
+					<li><a href="gallery.html">新村新貌</a></li>
+					<li><a>全景农村</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>文化龙园</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a href="newsList.html">节事活动</a></li>
+					<li><a href="newsList.html">光荣榜</a></li>
+					<li><a href="newsList.html">文化遗产</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>龙园大市场</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a href="newsList.html">赶集</a></li>
+					<li><a href="newsList.html">农村旅游</a></li>
+					<li><a href="newsList.html">农家乐</a></li>
+					<li><a href="newsList.html">我要求职</a></li>
+					<li><a href="newsList.html">企业招聘</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>龙园大学堂</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a href="newsList.html">兴农科普</a></li>
+					<li><a href="newsList.html">政策法规</a></li>
+					<li><a href="newsList.html">办事指南</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block">
+			<div class="primary">
+				<span><a><b>情系龙园</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a href="wishWall.html">游子情</a></li>
+					<li><a href="message.html">我要帮扶</a></li>
+					<li><a>慈善易物</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- END inc_header.html -->
+
+	<!-- START jobDetail.html -->
+	<a name="hashAnchor"></a>
+	<div class="title">
+		<div class="position">
+			您现在正在浏览： <a>龙园大市场</a><span>&nbsp;&gt;&nbsp;</span><a>企业招聘</a><span>&nbsp;&gt;&nbsp;</span><a>400客服专员</a>
+		</div>
+	</div>
+
+	<!-- job detail -->
+	<div class="limitWidth">
+		<div class="job-subject">
+			<p>
+				<span class="job-name">400客服专员</span>
+			</p>
+			<p>
+				<span class="job-attribute">发布时间：05-03 14:00 浏览212次</span>
+			</p>
+		</div>
+		<div class="job-content">
+			<div class="company-attribute">
+				<span class="fl mr14"><a>杭州顾维电气有限公司</a></span> <span class="fl mr14"><i
+					class="license fl"></i>执照已验证</span><span class="fl">诚信等级</span><span
+					class="fl"><i class="integrity fl"></i></span>
+			</div>
+			<div class="job-detail clearfix">
+				<ul>
+					<li><b>职位信息</b></li>
+					<li class="fl"><span>职位名称：</span><em>呼叫中心人员（全职）</em></li>
+					<li class="fl"><span>薪资待遇：</span><em>2000-3000元,试用期80%,三个月转正</em></li>
+					<li class="fl"><span>最低学历：</span><em>高中</em></li>
+					<li class="fl"><span>招聘人数：</span><em>4人</em></li>
+					<li class="fl"><span>工作经验：</span><em>不限（应届生亦可）</em></li>
+					<li class="fl"><span>工作地点：</span><em>杭州/临安</em></li>
+					<li class="fl"><span>性&#12288;&#12288;别：</span><em>女</em></li>
+					<li class="fl"><span>年&#12288;&#12288;龄：</span><em>20-30岁</em></li>
+				</ul>
+			</div>
+			<div class="welfare clearfix">
+				<p>
+					<b>岗位福利</b>
+				</p>
+				<div class="welfare-part-b">
+					<dl class="basic-welfare">
+						<dt>
+							<span class="icon-insure"></span> <span>社保福利</span>
+						</dt>
+						<dd>
+							<span><i class="ico-equip-has"></i>养老保险</span>
+						</dd>
+						<dd>
+							<span><em class="ico-equip-has"></em>医疗保险</span>
+						</dd>
+						<dd>
+							<span><em class="ico-equip-has"></em>工伤保险</span>
+						</dd>
+						<dd>
+							<span><em class="ico-equip-has"></em>失业保险</span>
+						</dd>
+						<dd>
+							<span><em class="ico-equip-has"></em>生育保险</span>
+						</dd>
+					</dl>
+					<dl class="clearfix other-welfare">
+						<dt>
+							<span class="icon-car"></span> <span>其他福利</span>
+						</dt>
+						<dd>
+							<dl>
+								<dd>
+									<span><em class="ico-equip-has"></em>带薪年假</span>
+								</dd>
+							</dl>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="job-apply">
+				<input type="button" value="申请该职位"></input>
+			</div>
+
+			<div class="welfare-part-c">
+
+				<div class="welfareTab">
+					<span class="select" id="about">职位描述</span><span id="description">公司介绍</span><span
+						id="evaluate">公司评价</span><span id="records">申请记录</span>
+				</div>
+				<div class="welfareBox" id="about-div">
+					岗位职责:<br /> 负责家电类第三方售后服务平台的用户来电咨询,投诉受理,用户回访,派单信息跟踪工作。<br />
+					工作轻松稳定,并提供岗位晋升通道。<br /> 任职资格:<br /> 1、身体健康,五官端正,有亲和力,普通话标准; <br />
+					2、有良好的语言表达和较强的沟通协调能力;<br /> 3、有良好的工作态度、踏实认真,富有责任心;
+					<dl>
+						<dt>联系方式：</dt>
+						<dd>联 系 人：徐林霞 (联系时请说在赶集网上看到的)</dd>
+						<dd>联系电话：18868700278</dd>
+						<dd>工作地点：临安长河临安市林学院附近</dd>
+					</dl>
+				</div>
+				<div class="welfareBox hide" id="description-div">
+					<p>
+						要服务网（1f5.cn），坐落于杭州高新技术产业开发区-滨江，是全国首家生活电
+						器服务平台商。由全国主流电器服务商联盟，为促进中国服务行业规范而创立。目前拥有各地联络/分公司37处、联盟服务商278
+						0家，服务区域覆盖全国90%一二级市场、60%三四级市场。<br /> 服务涵盖—— <br />
+						为消费者提供全品类生活电器咨询、资讯、投诉、上门等一站式绿色云服务产品； <br />
+						为服务商提供行业资讯、服务业务、管理提升、技术支持、人力资源、耗材集采； <br />
+						为生产销售企业提供售后业务、市场资讯、危机处理，及成套服务体系解决方案； <br />
+						为行业协会负责中国认证服务商信息的实地核准，和中国服务质量监督数据采集；
+					</p>
+				</div>
+				<div class="welfareBox hide" id="evaluate-div">
+					<div class="evaluate-part-a">
+						<dl class="clearfix">
+							<dt class="fl">
+								<em>*</em>评价
+							</dt>
+							<dd class="fl">
+								<input name="score" type="radio" value="1" checked="checked" /><em
+									class="d-user-eva-hand0"></em>好评
+							</dd>
+							<dd class="fl">
+								<input name="score" type="radio" value="2" /><em
+									class="d-user-eva-hand1"></em>中评
+							</dd>
+							<dd class="fl">
+								<input name="score" type="radio" value="3" /><em
+									class="d-user-eva-hand2"></em>差评
+							</dd>
+						</dl>
+					</div>
+					<div class="evaluate-part-b">
+						<dl class="clearfix">
+							<dt class="fl">
+								<em>*</em>评语
+							</dt>
+							<dd>
+								<textarea>请不要在此发与公司评价无关的内容，比如询问公司信息、广告等。</textarea>
+							</dd>
+						</dl>
+						<dl>
+							<dt class="fl">
+								<em>&nbsp;&nbsp;&nbsp;</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</dt>
+							<dd>
+								<input type="submit" value="提交点评" />
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="welfareBox hide" id="records-div">
+					<p>共有7人申请了该职位</p>
+					<table class="record-table">
+						<tbody>
+							<tr class="data-tr-bg">
+								<td>申请者</td>
+								<td>申请时间</td>
+								<td>状态</td>
+							</tr>
+							<tr>
+								<td>季相*</td>
+								<td>2013-05-03 14:10:51</td>
+								<td>申请成功</td>
+							</tr>
+							<tr>
+								<td>季相*</td>
+								<td>2013-05-03 14:10:51</td>
+								<td>申请成功</td>
+							</tr>
+							<tr>
+								<td>季相*</td>
+								<td>2013-05-03 14:10:51</td>
+								<td>申请成功</td>
+							</tr>
+							<tr>
+								<td>季相*</td>
+								<td>2013-05-03 14:10:51</td>
+								<td>申请成功</td>
+							</tr>
+							<tr>
+								<td>季相*</td>
+								<td>2013-05-03 14:10:51</td>
+								<td>申请成功</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- END jobDetail.html -->
+
+	<!-- START inc_footer.html -->
+	<div id="footerNav">
+		<div id="footerMenu">
+			<ul>
+				<li><a>关于我们 </a>┊</li>
+				<li><a>网站地图 </a>┊</li>
+				<li><a>联系我们 </a>┊</li>
+				<li><a>广告服务 </a></li>
+			</ul>
+		</div>
+		<p>Copyright 2013, All Rights Reserved</p>
+	</div>
+	<!-- END inc_footer.html -->
+</body>
+</html>

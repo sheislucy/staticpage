@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="龙园村CMS演示" />
+<meta name="keywords" content="龙园村CMS演示" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/job.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript"
+	src="../js/jquery-1.9.1.js"></script>
+<title>企业招聘 - Prototype</title>
+<script>
+	$(function() {
+		$(".check-all").click(
+				function() {
+
+					$("input[id^='check-item-']").prop("checked",
+							$(this).prop("checked"));
+
+					/* if ($(".check-all").attr("checked")) {
+						$(".check-all").prop('checked', '')
+						$("input[id^='check-item-']").prop('checked', '')
+					} else {
+						$(".check-all").prop("checked", true);
+						$("input[id^='check-item-']").prop("checked", true);
+					} */
+				});
+	});
+</script>
+</head>
+<body>
+
+	<!-- START inc_header.html -->
+	<div id="headerNav">
+		<div class="line"></div>
+		<div class="limitWidth">
+			<div class="weather">衢州市 多云 25～9℃</div>
+			<div class="loginWrapper">
+				<form>
+					<div class="loginAcct">
+						<input type="text" placeholder="帐号或邮箱"></input>
+					</div>
+					<div class="loginPassword">
+						<input type="password" placeholder="密码"></input>
+					</div>
+					<div class="loginBtn">
+						<input type="submit" value="登录"></input>
+					</div>
+					<div class="register">
+						<a href="#">会员注册</a>
+					</div>
+				</form>
+			</div>
+
+			<div class="loginWrapper" style="display: none;">
+				<div class="register">
+					<span>欢迎您：admin &nbsp;&nbsp;</span> <span><a href="#">退出登录</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="mainNav">
+		<div class="navWrapper">
+			<a class="logo" href="index.html"></a>
+			<div class="searchWrapper">
+				<form>
+					<div class="searchInput">
+						<input type="text" placeholder="请输入关键字"></input>
+					</div>
+					<div class="searchBtn">
+						<input type="submit" value="搜索"></input>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="menuNav">
+		<div class="line"></div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>美丽龙园</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a href="newsList.html">走近龙园</a></li>
+					<li><a href="gallery.html">新村新貌</a></li>
+					<li><a>全景农村</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>文化龙园</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a href="newsList.html">节事活动</a></li>
+					<li><a href="newsList.html">光荣榜</a></li>
+					<li><a href="newsList.html">文化遗产</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>龙园大市场</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a href="newsList.html">赶集</a></li>
+					<li><a href="newsList.html">农村旅游</a></li>
+					<li><a href="newsList.html">农家乐</a></li>
+					<li><a href="newsList.html">我要求职</a></li>
+					<li><a href="newsList.html">企业招聘</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block divide">
+			<div class="primary">
+				<span><a><b>龙园大学堂</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a href="newsList.html">兴农科普</a></li>
+					<li><a href="newsList.html">政策法规</a></li>
+					<li><a href="newsList.html">办事指南</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-block">
+			<div class="primary">
+				<span><a><b>情系龙园</b></a></span>
+			</div>
+			<div class="secondary">
+				<ul>
+					<li><a href="wishWall.html">游子情</a></li>
+					<li><a href="message.html">我要帮扶</a></li>
+					<li><a>慈善易物</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- END inc_header.html -->
+
+	<!-- START job.html -->
+	<a name="hashAnchor"></a>
+	<div class="title">
+		<div class="position">
+			您现在正在浏览： <a>龙园大市场</a><span>&nbsp;&gt;&nbsp;</span><a>企业招聘</a>
+		</div>
+	</div>
+
+	<!-- job list -->
+	<div class="limitWidth">
+		<div class="jobList">
+			<div class="title">
+				<span class="job-column fl"><input type="checkbox"
+					class="check-all" value="" id="checkallobjtop"
+					name="chooseallsendhead" />招聘职位</span> <span class="company-name fl">公司名称</span>
+				<span class="job-position fl">区域</span> <span class="release-date">发布时间</span>
+			</div>
+			<div class="job-repeat">
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">400客服专员</a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州顾维电气有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">青山湖</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">成就你梦想的平台，加入畅聚吧 </a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州畅聚科技有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">文一路</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">低要求高收入月入6千</a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州贵弘投资管理有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">朝晖</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">诚聘、呼叫专员 底薪2600以上</a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州富尔得生物科技有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">文二路</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">400客服专员</a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州顾维电气有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">青山湖</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">成就你梦想的平台，加入畅聚吧 </a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州畅聚科技有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">文一路</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">低要求高收入月入6千</a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州贵弘投资管理有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">朝晖</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">诚聘、呼叫专员 底薪2600以上</a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州富尔得生物科技有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">文二路</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">400客服专员</a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州顾维电气有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">青山湖</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">成就你梦想的平台，加入畅聚吧 </a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州畅聚科技有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">文一路</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">低要求高收入月入6千</a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州贵弘投资管理有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">朝晖</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">诚聘、呼叫专员 底薪2600以上</a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州富尔得生物科技有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">文二路</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">400客服专员</a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州顾维电气有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">青山湖</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">成就你梦想的平台，加入畅聚吧 </a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州畅聚科技有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">文一路</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">低要求高收入月入6千</a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州贵弘投资管理有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">朝晖</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+
+				<dl>
+					<dt class="job-column fl">
+						<input type="checkbox" id="check-item-1" /> <a href="#"
+							target="_blank">诚聘、呼叫专员 底薪2600以上</a>
+					</dt>
+					<dd class="company-name fl">
+						<a href="#" target="_blank" title="杭州顾维电气有限公司">杭州富尔得生物科技有限公司</a> <span
+							class="icon-yan" title="营业执照已验证">&nbsp;</span>
+					</dd>
+					<dd class="job-position fl">文二路</dd>
+					<dd class="release-date fl">05-08</dd>
+				</dl>
+			</div>
+			<div class="paging">
+				共17条记录 1/1页 <a>首页</a> <a>上一页</a> <a>下一页</a> <a>尾页</a> 第<a href="">1</a>页
+			</div>
+		</div>
+	</div>
+	<!-- END job.html -->
+
+	<!-- START inc_footer.html -->
+	<div id="footerNav">
+		<div id="footerMenu">
+			<ul>
+				<li><a>关于我们 </a>┊</li>
+				<li><a>网站地图 </a>┊</li>
+				<li><a>联系我们 </a>┊</li>
+				<li><a>广告服务 </a></li>
+			</ul>
+		</div>
+		<p>Copyright 2013, All Rights Reserved</p>
+	</div>
+	<!-- END inc_footer.html -->
+</body>
+</html>
