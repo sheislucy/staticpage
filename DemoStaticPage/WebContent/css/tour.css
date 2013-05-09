@@ -1,0 +1,98 @@
+@CHARSET "UTF-8";
+
+dd {
+	-webkit-margin-start: 0;
+}
+
+dl {
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ec6801;
+	cursor: pointer;
+}
+
+em {
+	font-style: normal;
+}
+
+.tourList .title {
+	width: 100%;
+	border: 1px solid #c4e5c1;
+	height: 40px;
+	line-height: 40px;
+}
+
+.tourList .title .main-title {
+	font-size: 24px;
+	margin-right: 20px;
+	margin-left: 10px;
+}
+
+.tourList .title .filter {
+	font-size: 14px;
+}
+
+.fl {
+	float: left;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.red {
+	color: #ec6801;
+}
+
+.tour-repeat dl {
+	width: 100%;
+	height: 80px;
+	line-height: 18px;
+	border-bottom: 1px dashed #ccc;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0;
+}
+
+.tour-repeat .tour-name {
+	font-size: 14px;
+	color: #75a960;
+}
+
+.tour-repeat .tour-attribute {
+	font-size: 13px;
+	color: #707070;
+}
+
+.paging {
+	margin-top: 10px;
+	text-align: center;
+	font-size: 13px;
+}
+
+.auth {
+	margin-left: 30px;
+}
+
+.icon-auth-p {
+	background: url(../images/picq.png) no-repeat;
+	display: inline-block;
+	width: 18px;
+	height: 16px;
+	vertical-align: middle;
+}
+
+.icon-auth-e {
+	background: url(../images/picq.png) no-repeat 0 -24px;
+	display: inline-block;
+	width: 18px;
+	height: 16px;
+	vertical-align: middle;
+}

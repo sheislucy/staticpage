@@ -1,0 +1,92 @@
+@CHARSET "UTF-8";
+
+em {
+	font-style: normal;
+}
+
+.fl {
+	float: left;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.red {
+	color: #ec6801;
+}
+
+.market-detail-wrapper {
+	border: 1px solid #ddd;
+	border-top: 2px solid #7aaf23;
+	border-bottom: 0;
+	margin-top: 10px;
+}
+
+.title-box {
+	padding-left: 40px;
+	border-bottom: 1px solid #ddd;
+}
+
+.title-name {
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 36px;
+	margin-bottom: 7px;
+}
+
+.title-box .attribute {
+	color: #666;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+.title-box .attribute span {
+	margin-right: 10px;
+}
+
+.content-box {
+	margin-top: 20px;
+	padding-left: 40px;
+}
+
+.info-a ul li {
+	width: 50%;
+	height: 30px;
+	font-size: 14px;
+}
+
+.info-a ul li span {
+	color: #707070;
+	margin-right: 20px;
+	width: 50px;
+}
+
+.info-b,.info-c {
+	width: 920px;
+}
+
+.info-b-tab,.info-c-tab {
+	background: #f7f7f7;
+	border-bottom: 1px solid #ddd;
+	height: 30px;
+}
+
+.info-b-tab span,.info-c-tab span {
+	width: 100px;
+	float: left;
+	line-height: 30px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.select {
+	background: #fff;
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.info-b p {
+	font-size: 13px;
+}

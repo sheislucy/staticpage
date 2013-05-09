@@ -221,7 +221,27 @@ ul,ol {
 	margin: 0 auto;
 	display: block;
 	height: 150px;
-	background: url(../images/menuBar.png);
+	*background: url(../images/menuBar2.png);
+}
+
+.menuBg1 {
+	background: url(../images/menu_1.jpg);
+}
+
+.menuBg2 {
+	background: url(../images/menu_2.jpg);
+}
+
+.menuBg3 {
+	background: url(../images/menu_3.jpg);
+}
+
+.menuBg4 {
+	background: url(../images/menu_4.jpg);
+}
+
+.menuBg5 {
+	background: url(../images/menu_5.jpg);
 }
 
 #menuNav div.line {

@@ -65,3 +65,31 @@ a:hover {
 	font-size: 13px;
 }
 
+.job-apply {
+	margin-top: 10px;
+}
+
+.job-apply input {
+	width: 80px;
+	border: 1px solid #75a960;
+	background: #cef791;
+	height: 20px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	color: #555555;
+	behavior: url(../css/PIE.htc);
+}
+
+.job-apply input:hover {
+	cursor: pointer;
+	background: #eaf7b1;
+	color: #000;
+}
+
+.job-apply input:active {
+	cursor: pointer;
+	background: #f8fcf3;
+	color: #000;
+}
